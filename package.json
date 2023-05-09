@@ -1,0 +1,12 @@
+{
+    "name": "bitburner-scripts",
+    "version": "0.1.0",
+    "scripts": {},
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.35.1",
+        "@typescript-eslint/parser": "^5.35.1",
+        "eslint": "^8.22.0",
+        "typescript": "^5.0.0",
+        "prettier": "^2.5.1"
+    }
+}
