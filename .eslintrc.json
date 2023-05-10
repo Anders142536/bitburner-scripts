@@ -21,5 +21,10 @@
         "out/**",
         "Bitburner.t.ts"
     ],
-    "rules": {}
+    "rules": {
+        "semi": [
+            "error",
+            "never"
+        ]
+    }
 }

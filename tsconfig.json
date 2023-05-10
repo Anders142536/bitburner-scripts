@@ -1,6 +1,5 @@
 {
     "include": [
-        "src/Bitburner.t.ts",
         "src/**/*"
     ],
     "compilerOptions": {
