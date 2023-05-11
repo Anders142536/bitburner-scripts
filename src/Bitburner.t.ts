@@ -1,6 +1,6 @@
 declare module "Bitburner" {
-    export type Host = string;
-    export type Script = string;
+    export type Host = string
+    export type Script = string
     export type StockSymbol =
         | "ECP"
         | "MGCP"
@@ -34,34 +34,34 @@ declare module "Bitburner" {
         | "JGN"
         | "CTYS"
         | "MDYN"
-        | "TITN";
-    export type OrderType = "limitbuy" | "limitsell" | "stopbuy" | "stopsell";
-    export type OrderPos = "long" | "short";
+        | "TITN"
+    export type OrderType = "limitbuy" | "limitsell" | "stopbuy" | "stopsell"
+    export type OrderPos = "long" | "short"
     export type University =
         | "Summit University"
         | "Rothman University"
-        | "ZB Institute Of Technology";
+        | "ZB Institute Of Technology"
     export type UniversityCourse =
         | "Study Computer Science"
         | "Data Strucures"
         | "Networks"
         | "Algorithms"
         | "Management"
-        | "Leadership";
+        | "Leadership"
     export type Gym =
         | "Crush Fitness Gym"
         | "Snap Fitness Gym"
         | "Iron Gym"
         | "Powerhouse Gym"
-        | "Millenium Fitness Gym";
-    export type GymStat = "str" | "def" | "dex" | "agi";
+        | "Millenium Fitness Gym"
+    export type GymStat = "str" | "def" | "dex" | "agi"
     export type City =
         | "Aevum"
         | "Chongqing"
         | "Sector-12"
         | "New Tokyo"
         | "Ishima"
-        | "Volhaven";
+        | "Volhaven"
     export type PurchaseableProgram =
         | "brutessh.exe"
         | "ftpcrack.exe"
@@ -70,8 +70,8 @@ declare module "Bitburner" {
         | "sqlinject.exe"
         | "deepscanv1.exe"
         | "deepscanv2.exe"
-        | "autolink.exe";
-    export type CreatableProgram = PurchaseableProgram | "serverprofiler.exe";
+        | "autolink.exe"
+    export type CreatableProgram = PurchaseableProgram | "serverprofiler.exe"
     export type CompanyName =
         // Sector-12
         | "MegaCorp"
@@ -121,7 +121,7 @@ declare module "Bitburner" {
         | "DefComm"
         | "VitaLife"
         | "GlobalPharmaceuticals"
-        | "NoodleBar";
+        | "NoodleBar"
     export type CompanyField =
         | "software"
         | "software consultant"
@@ -135,7 +135,7 @@ declare module "Bitburner" {
         | "employee"
         | "part-time employee"
         | "waiter"
-        | "part-time waiter";
+        | "part-time waiter"
     export type FactionName =
         | "Illuminati"
         | "Daedalus"
@@ -168,7 +168,7 @@ declare module "Bitburner" {
         | "Netburners"
         | "Tian Di Hui"
         | "CyberSec"
-        | "Bladeburners";
+        | "Bladeburners"
 
     export type GangName =
         | "Slum Snakes"
@@ -177,8 +177,8 @@ declare module "Bitburner" {
         | "The Dark Army"
         | "Speakers for the Dead"
         | "NiteSec"
-        | "The Black Hand";
-    export type FactionWork = "hacking" | "field" | "security";
+        | "The Black Hand"
+    export type FactionWork = "hacking" | "field" | "security"
     export type Crime =
         | "shoplift"
         | "rob store"
@@ -191,7 +191,7 @@ declare module "Bitburner" {
         | "grand theft auto"
         | "kidnap"
         | "assassinate"
-        | "heist";
+        | "heist"
     export type AugmentName =
         | "Augmented Targeting I"
         | "Augmented Targeting II"
@@ -297,257 +297,257 @@ declare module "Bitburner" {
         | "BLADE-51b Tesla Armor: Unibeam Upgrade"
         | "BLADE-51b Tesla Armor: Omnibeam Upgrade"
         | "BLADE-51b Tesla Armor: IPU Upgrade"
-        | "The Blade's Simulacrum";
+        | "The Blade's Simulacrum"
 
     export interface CrimeStats {
         /** Number representing the difficulty of the crime. Used for success chance calculations */
-        difficulty: number;
+        difficulty: number
         /** Amount of karma lost for SUCCESSFULLY committing this crime */
-        karma: number;
+        karma: number
         /** How many people die as a result of this crime */
-        kills: number;
+        kills: number
         /** How much money is given */
-        money: number;
+        money: number
         /** Name of crime */
-        name: number;
+        name: number
         /** Milliseconds it takes to attempt the crime */
-        time: number;
+        time: number
         /** Description of the crime activity */
-        type: string;
+        type: string
         /** hacking level impact on success change of the crime */
-        hacking_success_weight: number;
+        hacking_success_weight: number
         /** strength level impact on success change of the crime */
-        strength_success_weight: number;
+        strength_success_weight: number
         /** defense level impact on success change of the crime */
-        defense_success_weight: number;
+        defense_success_weight: number
         /** dexterity level impact on success change of the crime */
-        dexterity_success_weight: number;
+        dexterity_success_weight: number
         /** agility level impact on success change of the crime */
-        agility_success_weight: number;
+        agility_success_weight: number
         /** charisma level impact on success change of the crime */
-        charisma_success_weight: number;
+        charisma_success_weight: number
         /** hacking exp gained from crime */
-        hacking_exp: number;
+        hacking_exp: number
         /** strength exp gained from crime */
-        strength_exp: number;
+        strength_exp: number
         /** defense exp gained from crime */
-        defense_exp: number;
+        defense_exp: number
         /** dexterity exp gained from crime */
-        dexterity_exp: number;
+        dexterity_exp: number
         /** agility exp gained from crime */
-        agility_exp: number;
+        agility_exp: number
         /** charisma exp gained from crime */
-        charisma_exp: number;
+        charisma_exp: number
         /** intelligence exp gained from crime */
-        intelligence_exp: number;
+        intelligence_exp: number
     }
 
     export interface AugmentationStats {
         /** Multipler to hacking skill */
-        hacking_mult?: number;
+        hacking_mult?: number
         /** Multipler to strength skill */
-        strength_mult?: number;
+        strength_mult?: number
         /** Multipler to defense skill */
-        defense_mult?: number;
+        defense_mult?: number
         /** Multipler to dexterity skill */
-        dexterity_mult?: number;
+        dexterity_mult?: number
         /** Multipler to agility skill */
-        agility_mult?: number;
+        agility_mult?: number
         /** Multipler to charisma skill */
-        charisma_mult?: number;
+        charisma_mult?: number
         /** Multipler to hacking experience gain rate */
-        hacking_exp_mult?: number;
+        hacking_exp_mult?: number
         /** Multipler to strength experience gain rate */
-        strength_exp_mult?: number;
+        strength_exp_mult?: number
         /** Multipler to defense experience gain rate */
-        defense_exp_mult?: number;
+        defense_exp_mult?: number
         /** Multipler to dexterity experience gain rate */
-        dexterity_exp_mult?: number;
+        dexterity_exp_mult?: number
         /** Multipler to agility experience gain rate */
-        agility_exp_mult?: number;
+        agility_exp_mult?: number
         /** Multipler to charisma experience gain rate */
-        charisma_exp_mult?: number;
+        charisma_exp_mult?: number
         /** Multipler to chance of successfully performing a hack */
-        hacking_chance_mult?: number;
+        hacking_chance_mult?: number
         /** Multipler to hacking speed */
-        hacking_speed_mult?: number;
+        hacking_speed_mult?: number
         /** Multipler to amount of money the player gains from hacking */
-        hacking_money_mult?: number;
+        hacking_money_mult?: number
         /** Multipler to amount of money injected into servers using {@link grow()} */
-        hacking_grow_mult?: number;
+        hacking_grow_mult?: number
         /** Multipler to amount of reputation gained when working */
-        company_rep_mult?: number;
+        company_rep_mult?: number
         /** Multipler to amount of reputation gained when working */
-        faction_rep_mult?: number;
+        faction_rep_mult?: number
         /** Multipler to amount of money gained from crimes */
-        crime_money_mult?: number;
+        crime_money_mult?: number
         /** Multipler to crime success rate */
-        crime_success_mult?: number;
+        crime_success_mult?: number
         /** Multipler to amount of money gained from working */
-        work_money_mult?: number;
+        work_money_mult?: number
         /** Multipler to amount of money produced by Hacknet Nodes */
-        hacknet_node_money_mult?: number;
+        hacknet_node_money_mult?: number
         /** Multipler to cost of purchasing a Hacknet Node */
-        hacknet_node_purchase_cost_mult?: number;
+        hacknet_node_purchase_cost_mult?: number
         /** Multipler to cost of ram for a Hacknet Node */
-        hacknet_node_ram_cost_mult?: number;
+        hacknet_node_ram_cost_mult?: number
         /** Multipler to cost of core for a Hacknet Node */
-        hacknet_node_core_cost_mult?: number;
+        hacknet_node_core_cost_mult?: number
         /** Multipler to cost of leveling up a Hacknet Node */
-        hacknet_node_level_cost_mult?: number;
+        hacknet_node_level_cost_mult?: number
         /** Multipler to Bladeburner max stamina */
-        bladeburner_max_stamina_mult?: number;
+        bladeburner_max_stamina_mult?: number
         /** Multipler to Bladeburner stamina gain rate */
-        bladeburner_stamina_gain_mult?: number;
+        bladeburner_stamina_gain_mult?: number
         /** Multipler to effectiveness in Bladeburner Field Analysis */
-        bladeburner_analysis_mult?: number;
+        bladeburner_analysis_mult?: number
         /** Multipler to success chance in Bladeburner contracts/operations */
-        bladeburner_success_chance_mult?: number;
+        bladeburner_success_chance_mult?: number
     }
     export interface BasicHGWOptions {
         /** Number of threads to use for this function. Must be less than or equal to the number of threads the script is running with. */
-        threads: number;
+        threads: number
     }
 
     export interface CodingAttemptOptions {
         /** If truthy, then the function will return a string that states the contract’s reward when it is successfully solved. */
-        returnReward: boolean;
+        returnReward: boolean
     }
 
     export interface AugmentPair {
         /** augmentation name */
-        name: AugmentName;
+        name: AugmentName
         /** augmentation cost */
-        cost: number;
+        cost: number
     }
 
     export interface StockOrderObject {
         /** Number of shares */
-        shares: number;
+        shares: number
         /** Price per share */
-        price: number;
+        price: number
         /** Order type */
-        type: "Limit Buy Order" | "Limit Sell Order" | "Stop Buy Order" | "Stop Buy Order";
+        type: "Limit Buy Order" | "Limit Sell Order" | "Stop Buy Order" | "Stop Buy Order"
         /** Order position */
-        position: "S" | "L";
+        position: "S" | "L"
     }
     export type StockOrder = {
         /** Stock Symbol */
-        [key in StockSymbol]?: StockOrderObject[];
-    };
+        [key in StockSymbol]?: StockOrderObject[]
+    }
 
     export interface ProcessInfo {
         /** Script name. */
-        filename: Script;
+        filename: Script
         /** Number of threads script is running with */
-        threads: number;
+        threads: number
         /** Script's arguments */
-        args: string[];
+        args: string[]
     }
 
     export interface HackingMultipliers {
         /** Player's hacking chance multiplier. */
-        chance: number;
+        chance: number
         /** Player's hacking speed multiplier. */
-        speed: number;
+        speed: number
         /** Player's hacking money stolen multiplier. */
-        money: number;
+        money: number
         /** Player's hacking growth multiplier */
-        growth: number;
+        growth: number
     }
 
     export interface HacknetMultipliers {
         /** Player's hacknet production multiplier */
-        production: number;
+        production: number
         /** Player's hacknet purchase cost multiplier */
-        purchaseCost: number;
+        purchaseCost: number
         /** Player's hacknet ram cost multiplier */
-        ramCost: number;
+        ramCost: number
         /** Player's hacknet core cost multiplier */
-        coreCost: number;
+        coreCost: number
         /** Player's hacknet level cost multiplier */
-        levelCost: number;
+        levelCost: number
     }
 
     export interface BitNodeMultipliers {
         /** Influences how quickly the player's agility level (not exp) scales */
-        AgilityLevelMultiplier: number;
+        AgilityLevelMultiplier: number
         /** Influences the base cost to purchase an augmentation. */
-        AugmentationMoneyCost: number;
+        AugmentationMoneyCost: number
         /** Influences the base rep the player must have with a faction to purchase an augmentation. */
-        AugmentationRepCost: number;
+        AugmentationRepCost: number
         /** Influences how quickly the player can gain rank within Bladeburner. */
-        BladeburnerRank: number;
+        BladeburnerRank: number
         /** Influences the cost of skill levels from Bladeburner. */
-        BladeburnerSkillCost: number;
+        BladeburnerSkillCost: number
         /** Influences how quickly the player's charisma level (not exp) scales */
-        CharismaLevelMultiplier: number;
+        CharismaLevelMultiplier: number
         /** Influences the experience gained for each ability when a player completes a class. */
-        ClassGymExpGain: number;
+        ClassGymExpGain: number
         /** Influences the amount of money gained from completing Coding Contracts */
-        CodingContractMoney: number;
+        CodingContractMoney: number
         /** Influences the experience gained for each ability when the player completes working their job. */
-        CompanyWorkExpGain: number;
+        CompanyWorkExpGain: number
         /** Influences how much money the player earns when completing working their job. */
-        CompanyWorkMoney: number;
+        CompanyWorkMoney: number
         /** Influences the valuation of corporations created by the player. */
-        CorporationValuation: number;
+        CorporationValuation: number
         /** Influences the base experience gained for each ability when the player commits a crime. */
-        CrimeExpGain: number;
+        CrimeExpGain: number
         /** Influences the base money gained when the player commits a crime. */
-        CrimeMoney: number;
+        CrimeMoney: number
         /** Influences how many Augmentations you need in order to get invited to the Daedalus faction */
-        DaedalusAugsRequirement: number;
+        DaedalusAugsRequirement: number
         /** Influences how quickly the player's defense level (not exp) scales */
-        DefenseLevelMultiplier: number;
+        DefenseLevelMultiplier: number
         /** Influences how quickly the player's dexterity level (not exp) scales */
-        DexterityLevelMultiplier: number;
+        DexterityLevelMultiplier: number
         /** Influences how much rep the player gains in each faction simply by being a member. */
-        FactionPassiveRepGain: number;
+        FactionPassiveRepGain: number
         /** Influences the experience gained for each ability when the player completes work for a Faction. */
-        FactionWorkExpGain: number;
+        FactionWorkExpGain: number
         /** Influences how much rep the player gains when performing work for a faction. */
-        FactionWorkRepGain: number;
+        FactionWorkRepGain: number
         /** Influences how much it costs to unlock the stock market's 4S Market Data API */
-        FourSigmaMarketDataApiCost: number;
+        FourSigmaMarketDataApiCost: number
         /** Influences how much it costs to unlock the stock market's 4S Market Data (NOT API) */
-        FourSigmaMarketDataCost: number;
+        FourSigmaMarketDataCost: number
         /** Influences the experienced gained when hacking a server. */
-        HackExpGain: number;
+        HackExpGain: number
         /** Influences how quickly the player's hacking level (not experience) scales */
-        HackingLevelMultiplier: number;
+        HackingLevelMultiplier: number
         /** Influences how much money is produced by Hacknet Nodes and the hash rate of Hacknet Servers (unlocked in BitNode-9) */
-        HacknetNodeMoney: number;
+        HacknetNodeMoney: number
         /** Influences how much money it costs to upgrade your home computer's RAM */
-        HomeComputerRamCost: number;
+        HomeComputerRamCost: number
         /** Influences how much money is gained when the player infiltrates a company. */
-        InfiltrationMoney: number;
+        InfiltrationMoney: number
         /** Influences how much rep the player can gain from factions when selling stolen documents and secrets */
-        InfiltrationRep: number;
+        InfiltrationRep: number
         /** Influences how much money can be stolen from a server when the player performs a hack against it through the Terminal. */
-        ManualHackMoney: number;
+        ManualHackMoney: number
         /** Influence how much it costs to purchase a server */
-        PurchasedServerCost: number;
+        PurchasedServerCost: number
         /** Influences the maximum number of purchased servers you can have */
-        PurchasedServerLimit: number;
+        PurchasedServerLimit: number
         /** Influences the maximum allowed RAM for a purchased server */
-        PurchasedServerMaxRam: number;
+        PurchasedServerMaxRam: number
         /** Influences the minimum favor the player must have with a faction before they can donate to gain rep. */
-        RepToDonateToFaction: number;
+        RepToDonateToFaction: number
         /** Influences how much money can be stolen from a server when a script performs a hack against it. */
-        ScriptHackMoney: number;
+        ScriptHackMoney: number
         /** Influences the growth percentage per cycle against a server. */
-        ServerGrowthRate: number;
+        ServerGrowthRate: number
         /** Influences the maxmimum money that a server can grow to. */
-        ServerMaxMoney: number;
+        ServerMaxMoney: number
         /** Influences the initial money that a server starts with. */
-        ServerStartingMoney: number;
+        ServerStartingMoney: number
         /** Influences the initial security level (hackDifficulty) of a server. */
-        ServerStartingSecurity: number;
+        ServerStartingSecurity: number
         /** Influences the weaken amount per invocation against a server. */
-        ServerWeakenRate: number;
+        ServerWeakenRate: number
         /** Influences how quickly the player's strength level (not exp) scales */
-        StrengthLevelMultiplier: number;
+        StrengthLevelMultiplier: number
     }
     /**
      * A port is implemented as a sort of serialized queue,
@@ -558,28 +558,28 @@ declare module "Bitburner" {
      * This means if you close and re-open the game, or reload the page
      * then you will lose all of the data in the ports!
      */
-    export type Port = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20;
-    export type Handle = string | Port;
+    export type Port = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20
+    export type Handle = string | Port
 
     export interface NodeStats {
         /** Node's name ("hacknet-node-5") */
-        name: string;
+        name: string
         /** Node's level */
-        level: number;
+        level: number
         /** Node's RAM */
-        ram: number;
+        ram: number
         /** Node's number of cores */
-        cores: number;
+        cores: number
         /** Cache level. Only applicable for Hacknet Servers */
-        cache: number;
+        cache: number
         /** Hash Capacity provided by this Node. Only applicable for Hacknet Servers */
-        hashCapacity: number;
+        hashCapacity: number
         /** Node's production per second */
-        production: number;
+        production: number
         /** Number of seconds since Node has been purchased */
-        timeOnline: number;
+        timeOnline: number
         /** Total number of money Node has produced */
-        totalProduction: number;
+        totalProduction: number
     }
 
     export type HashUpgrades =
@@ -592,124 +592,124 @@ declare module "Bitburner" {
         | "Exchange for Corporation Research"
         | "Exchange for Bladeburner Rank"
         | "Exchange for Bladeburner SP"
-        | "Generate Coding Contract";
+        | "Generate Coding Contract"
 
     export interface PlayerStats {
         /** Hacking level */
-        hacking: number;
+        hacking: number
         /** Strength level */
-        strength: number;
+        strength: number
         /** Defense level */
-        defense: number;
+        defense: number
         /** Dexterity level */
-        dexterity: number;
+        dexterity: number
         /** Agility level */
-        agility: number;
+        agility: number
         /** Chraisma level */
-        charisma: number;
+        charisma: number
         /** Intelligence level */
-        intelligence: number;
+        intelligence: number
     }
 
     export interface CharacterMult {
         /** Agility stat */
-        agility: number;
+        agility: number
         /** Agility exp */
-        agilityExp: number;
+        agilityExp: number
         /** Company reputation */
-        companyRep: number;
+        companyRep: number
         /** Money earned from crimes */
-        crimeMoney: number;
+        crimeMoney: number
         /** Crime success chance */
-        crimeSuccess: number;
+        crimeSuccess: number
         /** Defense stat */
-        defense: number;
+        defense: number
         /** Defense exp */
-        defenseExp: number;
+        defenseExp: number
         /** Dexterity stat */
-        dexterity: number;
+        dexterity: number
         /** Dexterity exp */
-        dexterityExp: number;
+        dexterityExp: number
         /** Faction reputation */
-        factionRep: number;
+        factionRep: number
         /** Hacking stat */
-        hacking: number;
+        hacking: number
         /** Hacking exp */
-        hackingExp: number;
+        hackingExp: number
         /** Strength stat */
-        strength: number;
+        strength: number
         /** Strength exp */
-        strengthExp: number;
+        strengthExp: number
         /** Money earned from jobs */
-        workMoney: number;
+        workMoney: number
     }
     export interface CharacterInfo {
         /** Current BitNode number */
-        bitnode: number;
+        bitnode: number
         /** Name of city you are currently in */
-        city: City;
+        city: City
         /** Array of factions you are currently a member of */
-        factions: FactionName[];
+        factions: FactionName[]
         /** Current health points */
-        hp: number;
+        hp: number
         /** Array of all companies at which you have jobs */
-        company: CompanyName[];
+        company: CompanyName[]
         /** Array of job positions for all companies you are employed at. Same order as 'jobs' */
-        jobTitle: CompanyField[];
+        jobTitle: CompanyField[]
         /** Maximum health points */
-        maxHp: number;
+        maxHp: number
         /** Boolean indicating whether or not you have a tor router */
-        tor: boolean;
+        tor: boolean
         /** Object with many of the player's multipliers from Augmentations/Source Files */
-        mult: CharacterMult;
+        mult: CharacterMult
         /** Timed worked in ms */
-        timeWorked: number;
+        timeWorked: number
         /** Hacking experience earned so far from work */
-        workHackExpGain: number;
+        workHackExpGain: number
         /** Str experience earned so far from work */
-        workStrExpGain: number;
+        workStrExpGain: number
         /** Def experience earned so far from work */
-        workDefExpGain: number;
+        workDefExpGain: number
         /** Dex experience earned so far from work */
-        workDexExpGain: number;
+        workDexExpGain: number
         /** Agi experience earned so far from work */
-        workAgiExpGain: number;
+        workAgiExpGain: number
         /** Cha experience earned so far from work */
-        workChaExpGain: number;
+        workChaExpGain: number
         /** Reputation earned so far from work, if applicable */
-        workRepGain: number;
+        workRepGain: number
         /** Money earned so far from work, if applicable */
-        workMoneyGain: number;
+        workMoneyGain: number
     }
 
     export interface SleeveWorkGains {
         /** hacking exp gained from work */
-        workHackExpGain: number;
+        workHackExpGain: number
         /** strength exp gained from work */
-        workStrExpGain: number;
+        workStrExpGain: number
         /** defense exp gained from work, */
-        workDefExpGain: number;
+        workDefExpGain: number
         /** dexterity exp gained from work */
-        workDexExpGain: number;
+        workDexExpGain: number
         /** agility exp gained from work */
-        workAgiExpGain: number;
+        workAgiExpGain: number
         /** charisma exp gained from work */
-        workChaExpGain: number;
+        workChaExpGain: number
         /** money gained from work */
-        workMoneyGain: number;
+        workMoneyGain: number
     }
 
     export interface SourceFileLvl {
         /** The number of the source file */
-        n: 1|2|3|4|5|6|7|8|9|10|11|12;
+        n: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
         /** The level of the source file */
-        lvl: number;
+        lvl: number
     }
 
     export type BladeburnerContracts =
         | "Tracking"
         | "Bounty Hunter"
-        | "Retirement";
+        | "Retirement"
 
     export type BladeburnerOperations =
         | "Investigation"
@@ -717,7 +717,7 @@ declare module "Bitburner" {
         | "Sting Operation"
         | "Raid"
         | "Stealth Retirement Operation"
-        | "Assassination";
+        | "Assassination"
 
     export type BladeburnerBlackOps =
         | "Operation Typhoon"
@@ -740,14 +740,14 @@ declare module "Bitburner" {
         | "Operation Ultron"
         | "Operation Centurion"
         | "Operation Vindictus"
-        | "Operation Daedalus";
+        | "Operation Daedalus"
 
     export type BladeburnerGenActions =
         | "Training"
         | "Field Analysis"
         | "Recruitment"
         | "Diplomacy"
-        | "Hyperbolic Regeneration Chamber";
+        | "Hyperbolic Regeneration Chamber"
 
     export type BladeburnerSkills =
         | "Blade's Intuition"
@@ -763,19 +763,19 @@ declare module "Bitburner" {
         | "Datamancer"
         | "Cyber's Edge"
         | "Hands of Midas"
-        | "Hyperdrive";
+        | "Hyperdrive"
 
     export type BladeburnerActTypes =
         | "contracts"
         | "operations"
         | "black ops"
-        | "general";
+        | "general"
 
     export interface BladeburnerCurAction {
         /** Type of Action */
-        type: BladeburnerActTypes | "Idle";
+        type: BladeburnerActTypes | "Idle"
         /** Name of Action */
-        name: BladeburnerGenActions | BladeburnerContracts | BladeburnerOperations | BladeburnerBlackOps;
+        name: BladeburnerGenActions | BladeburnerContracts | BladeburnerOperations | BladeburnerBlackOps
     }
 
     export type CodingContractTypes =
@@ -794,41 +794,41 @@ declare module "Bitburner" {
         | "Unique Paths in a Grid I"
         | "Unique Paths in a Grid II"
         | "Sanitize Parentheses in Expression"
-        | "Find All Valid Math Expressions";
+        | "Find All Valid Math Expressions"
 
     export interface GangGenInfo {
         /** Name of faction that the gang belongs to ("Slum Snakes", etc.) */
-        faction: GangName;
+        faction: GangName
         /** Boolean indicating whether or not its a hacking gang */
-        isHacking: boolean;
+        isHacking: boolean
         /** Money earned per second */
-        moneyGainRate: number;
+        moneyGainRate: number
         /** Gang's power for territory warfare */
-        power: number;
+        power: number
         /** Gang's respect */
-        respect: number;
+        respect: number
         /** Respect earned per second */
-        respectGainRate: number;
+        respectGainRate: number
         /** Amount of territory held. Returned in decimal form, not percentage */
-        territory: number;
+        territory: number
         /** Clash chance. Returned in decimal form, not percentage */
-        territoryClashChance: number;
+        territoryClashChance: number
         /** Gang's wanted level */
-        wantedLevel: number;
+        wantedLevel: number
         /** Wanted level gained/lost per second (negative for losses) */
-        wantedLevelGainRate: number;
+        wantedLevelGainRate: number
     }
 
     export interface GangOtherInfoObject {
         /** Gang power */
-        power: number;
+        power: number
         /** Gang territory, in decimal form */
-        territory: number;
+        territory: number
     }
     export type GangOtherInfo = {
         /** Stock Symbol */
-        [key in GangName]: GangOtherInfoObject[];
-    };
+        [key in GangName]: GangOtherInfoObject[]
+    }
 
     export type GangEquipment =
         | "Baseball Bat"
@@ -851,14 +851,14 @@ declare module "Bitburner" {
         | "Soulstealer Rootkit"
         | "Demon Rootkit"
         | "Hmap Node"
-        | "Jack the Ripper";
+        | "Jack the Ripper"
 
     export type GangEquipmentType =
         | "Weapon"
         | "Armor"
         | "Vehicle"
         | "Rootkit"
-        | "Augmentation";
+        | "Augmentation"
 
     export type GangAugmentations =
         | "Bionic Arms"
@@ -871,7 +871,7 @@ declare module "Bitburner" {
         | "BitWire"
         | "Neuralstimulator"
         | "DataJack"
-        | "Graphene Bone Lacings";
+        | "Graphene Bone Lacings"
 
     export type GangTasks =
         | "Unassigned"
@@ -897,194 +897,194 @@ declare module "Bitburner" {
         | "Train Combat"
         | "Train Hacking"
         | "Train Charisma"
-        | "Territory Warfare";
-    
+        | "Territory Warfare"
+
     export interface GangTasksStats {
         /** Task name */
-        name: GangTasks;
+        name: GangTasks
         /** Task Description */
-        desc: string;
+        desc: string
         /** Is a task of a hacking gang */
-        isHacking: boolean;
+        isHacking: boolean
         /** Is a task of a combat gang */
-        isCombat: boolean;
+        isCombat: boolean
         /** Base respect earned */
-        baseRespect: number;
+        baseRespect: number
         /** Base wanted earned */
-        baseWanted: number;
+        baseWanted: number
         /** Base money earned */
-        baseMoney: number;
+        baseMoney: number
         /** Hacking skill impact on task scaling */
-        hackWeight: number;
+        hackWeight: number
         /** Stength skill impact on task scaling */
-        strWeight: number;
+        strWeight: number
         /** Defense skill impact on task scaling */
-        defWeight: number;
+        defWeight: number
         /** Dexterity skill impact on task scaling */
-        dexWeight: number;
+        dexWeight: number
         /** Agility skill impact on task scaling */
-        agiWeight: number;
+        agiWeight: number
         /** Charisma skill impact on task scaling */
-        chaWeight: number;
+        chaWeight: number
         /** Number representing the difficulty of the task */
-        difficulty: number;
+        difficulty: number
         /** Territory impact on task scaling */
-        territory: GangTasksTerritory;
+        territory: GangTasksTerritory
     }
 
     export interface GangEquipmentStats {
         /** Strength multiplier */
-        str: number;
+        str: number
         /** Defense multiplier */
-        def: number;
+        def: number
         /** Dexterity multiplier */
-        dex: number;
+        dex: number
         /** Agility multiplier */
-        agi: number;
+        agi: number
         /** Charisma multiplier */
-        cha: number;
+        cha: number
         /** Hacking multiplier */
-        hack: number;
+        hack: number
     }
 
     export interface GangTasksTerritory {
         /** Money gain impact on task scaling */
-        money: number;
+        money: number
         /** Respect gain impact on task scaling */
-        respect: number;
+        respect: number
         /** Wanted gain impact on task scaling */
-        wanted: number;
+        wanted: number
     }
 
     export interface GangMemberInfo {
         /** Agility stat */
-        agility: number;
+        agility: number
         /** Agility multiplier from equipment. Decimal form */
-        agilityEquipMult: number;
+        agilityEquipMult: number
         /** Agility multiplier from ascension. Decimal form */
-        agilityAscensionMult: number;
+        agilityAscensionMult: number
         /** Array of names of all owned Augmentations */
-        augmentations: GangAugmentations[];
+        augmentations: GangAugmentations[]
         /** Charisma stat */
-        charisma: number;
+        charisma: number
         /** Charisma multiplier from equipment. Decimal form */
-        charismaEquipMult: number;
+        charismaEquipMult: number
         /** Charisma multiplier from ascension. Decimal form */
-        charismaAscensionMult: number;
+        charismaAscensionMult: number
         /** Defense stat */
-        defense: number;
+        defense: number
         /** Defense multiplier from equipment. Decimal form */
-        defenseEquipMult: number;
+        defenseEquipMult: number
         /** Defense multiplier from ascension. Decimal form */
-        defenseAscensionMult: number;
+        defenseAscensionMult: number
         /** Dexterity stat */
-        dexterity: number;
+        dexterity: number
         /** Dexterity multiplier from equipment. Decimal form */
-        dexterityEquipMult: number;
+        dexterityEquipMult: number
         /** Dexterity multiplier from ascension. Decimal form */
-        dexterityAscensionMult: number;
+        dexterityAscensionMult: number
         /** Array of names of all owned Non-Augmentation Equipment */
-        equipment: GangEquipment[];
+        equipment: GangEquipment[]
         /** Hacking stat */
-        hacking: number;
+        hacking: number
         /** Hacking multiplier from equipment. Decimal form */
-        hackingEquipMult: number;
+        hackingEquipMult: number
         /** Hacking multiplier from ascension. Decimal form */
-        hackingAscensionMult: number;
+        hackingAscensionMult: number
         /** Strength stat */
-        strength: number;
+        strength: number
         /** Strength multiplier from equipment. Decimal form */
-        strengthEquipMult: number;
+        strengthEquipMult: number
         /** Strength multiplier from ascension. Decimal form */
-        strengthAscensionMult: number;
+        strengthAscensionMult: number
         /** Name of currently assigned task */
-        task: GangTasks;
+        task: GangTasks
     }
 
     export interface GangMemberAscension {
         /** Amount of respect lost from ascending */
-        respect: number;
+        respect: number
         /** Hacking multiplier gained from ascending. Decimal form */
-        hack: number;
+        hack: number
         /** Strength multiplier gained from ascending. Decimal form */
-        str: number;
+        str: number
         /** Defense multiplier gained from ascending. Decimal form */
-        def: number;
+        def: number
         /** Dexterity multiplier gained from ascending. Decimal form */
-        dex: number;
+        dex: number
         /** Agility multiplier gained from ascending. Decimal form */
-        agi: number;
+        agi: number
         /** Charisma multiplier gained from ascending. Decimal form */
-        cha: number;
+        cha: number
     }
 
     export interface SleeveStats {
         /** current shock of the sleeve [0-100] */
-        shock: 0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20
-                |21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37
-                |38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54
-                |55|56|57|58|59|60|61|62|63|64|65|66|67|68|69|70|71
-                |72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87|88
-                |89|90|91|92|93|94|95|96|97|98|99|100;
+        shock: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20
+        | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 | 35 | 36 | 37
+        | 38 | 39 | 40 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 | 50 | 51 | 52 | 53 | 54
+        | 55 | 56 | 57 | 58 | 59 | 60 | 61 | 62 | 63 | 64 | 65 | 66 | 67 | 68 | 69 | 70 | 71
+        | 72 | 73 | 74 | 75 | 76 | 77 | 78 | 79 | 80 | 81 | 82 | 83 | 84 | 85 | 86 | 87 | 88
+        | 89 | 90 | 91 | 92 | 93 | 94 | 95 | 96 | 97 | 98 | 99 | 100
         /** current sync of the sleeve [0-100] */
-        sync: 0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20
-               |21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37
-               |38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54
-               |55|56|57|58|59|60|61|62|63|64|65|66|67|68|69|70|71
-               |72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87|88
-               |89|90|91|92|93|94|95|96|97|98|99|100;
+        sync: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20
+        | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 | 35 | 36 | 37
+        | 38 | 39 | 40 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 | 50 | 51 | 52 | 53 | 54
+        | 55 | 56 | 57 | 58 | 59 | 60 | 61 | 62 | 63 | 64 | 65 | 66 | 67 | 68 | 69 | 70 | 71
+        | 72 | 73 | 74 | 75 | 76 | 77 | 78 | 79 | 80 | 81 | 82 | 83 | 84 | 85 | 86 | 87 | 88
+        | 89 | 90 | 91 | 92 | 93 | 94 | 95 | 96 | 97 | 98 | 99 | 100
         /** current hacking skill of the sleeve */
-        hacking_skill: number;
+        hacking_skill: number
         /** current strength of the sleeve */
-        strength: number;
+        strength: number
         /** current defense of the sleeve */
-        defense: number;
+        defense: number
         /** current dexterity of the sleeve */
-        dexterity: number;
+        dexterity: number
         /** current agility of the sleeve */
-        agility: number;
+        agility: number
         /** current charisma of the sleeve */
-        charisma: number;
+        charisma: number
     }
 
     export interface SleeveInformation {
         /** location of the sleeve */
-        city: City;
+        city: City
         /** current hp of the sleeve */
-        hp: number;
+        hp: number
         /** max hp of the sleeve */
-        maxHp: number;
+        maxHp: number
         /** jobs available to the sleeve */
-        jobs: string[];
+        jobs: string[]
         /** job titles available to the sleeve */
-        jobTitle: CompanyField[];
+        jobTitle: CompanyField[]
         /** does this sleeve have access to the tor router */
-        tor: boolean;
+        tor: boolean
         /** sleeve multipliers */
-        mult: CharacterMult;
+        mult: CharacterMult
         /** time spent on the current task in milliseconds */
-        timeWorked: number;
+        timeWorked: number
         /** earnings synchronized to other sleeves */
-        earningsForSleeves: SleeveWorkGains;
+        earningsForSleeves: SleeveWorkGains
         /** earnings synchronized to the player */
-        earningsForPlayer: SleeveWorkGains;
+        earningsForPlayer: SleeveWorkGains
         /** earnings for this sleeve */
-        earningsForTask: SleeveWorkGains;
+        earningsForTask: SleeveWorkGains
         /** faction or company reputation gained for the current task */
-        workRepGain: number;
+        workRepGain: number
     }
 
     export interface SleeveTask {
         /** task type */
-        task: string;
+        task: string
         /** crime currently attempting, if any */
-        crime: Crime | "";
+        crime: Crime | ""
         /** location of the task, if any */
-        location: City | "";
+        location: City | ""
         /** stat being trained at the gym, if any */
-        gymStatType: GymStat | "";
+        gymStatType: GymStat | ""
         /** faction work type being performed, if any */
-        factionWorkType: FactionWork | "";
+        factionWorkType: FactionWork | ""
     }
 
     export interface TIX {
@@ -1095,7 +1095,7 @@ declare module "Bitburner" {
          * @ramCost 2 GB
          * @returns {string[]} Array of the symbols of the tradable stocks.
          */
-        getStockSymbols (): StockSymbol[];
+        getStockSymbols(): StockSymbol[]
 
         /**
          * Returns the price of a stock, given its symbol (NOT the company name).
@@ -1111,7 +1111,7 @@ declare module "Bitburner" {
          * @param {string} sym Stock symbol.
          * @returns {number} The price of a stock.
          */
-        getStockPrice (sym: StockSymbol): number;
+        getStockPrice(sym: StockSymbol): number
 
         /**
          * Given a stock’s symbol (NOT the company name), returns the ask price of that stock.
@@ -1121,7 +1121,7 @@ declare module "Bitburner" {
          * @param {string} sym Stock symbol.
          * @returns {number} The ask price of a stock.
          */
-        getStockAskPrice (sym: StockSymbol): number;
+        getStockAskPrice(sym: StockSymbol): number
 
         /**
          * Given a stock’s symbol (NOT the company name), returns the bid price of that stock.
@@ -1131,7 +1131,7 @@ declare module "Bitburner" {
          * @param {string} sym Stock symbol.
          * @returns {number} The bid price of a stock.
          */
-        getStockBidPrice (sym: StockSymbol): number;
+        getStockBidPrice(sym: StockSymbol): number
 
         /**
          * Returns an array of four elements that represents the player’s position in a stock.
@@ -1158,7 +1158,7 @@ declare module "Bitburner" {
          * @param {string} sym Stock symbol.
          * @returns {[number,number,number,number]} Array of four elements that represents the player’s position in a stock.
          */
-        getStockPosition (sym: StockSymbol): [number, number, number, number];
+        getStockPosition(sym: StockSymbol): [number, number, number, number]
 
         /**
          * Returns the maximum number of shares that the stock has.
@@ -1169,7 +1169,7 @@ declare module "Bitburner" {
          * @param {string} sym Stock symbol.
          * @returns {number} Maximum number of shares that the stock has.
          */
-        getStockMaxShares (sym: StockSymbol): number;
+        getStockMaxShares(sym: StockSymbol): number
 
         /**
          * Calculates and returns how much it would cost to buy a given number of shares of a stock.
@@ -1181,7 +1181,7 @@ declare module "Bitburner" {
          * @param {string} posType Specifies whether the order is a “Long” or “Short” position.
          * @returns {number} Cost to buy a given number of shares of a stock.
          */
-        getStockPurchaseCost (sym: StockSymbol, shares: Number, posType: OrderPos): number;
+        getStockPurchaseCost(sym: StockSymbol, shares: Number, posType: OrderPos): number
 
         /**
          * Calculates and returns how much you would gain from selling a given number of shares of a stock.
@@ -1193,7 +1193,7 @@ declare module "Bitburner" {
          * @param {string} posType Specifies whether the order is a “Long” or “Short” position.
          * @returns {number} Gain from selling a given number of shares of a stock.
          */
-        getStockSaleGain (sym: StockSymbol, shares: Number, posType: OrderPos): number;
+        getStockSaleGain(sym: StockSymbol, shares: Number, posType: OrderPos): number
 
 
         /**
@@ -1211,7 +1211,7 @@ declare module "Bitburner" {
          * @param {number} shares Number of shares to purchased. Must be positive. Will be rounded to nearest integer.
          * @returns {number} The stock price at which each share was purchased, otherwise 0 if the shares weren't purchased.
          */
-        buyStock (sym: StockSymbol, shares: number): number;
+        buyStock(sym: StockSymbol, shares: number): number
 
         /**
          * Attempts to sell shares of a stock using a Market Order.
@@ -1233,7 +1233,7 @@ declare module "Bitburner" {
          * @param {number} shares Number of shares to sell. Must be positive. Will be rounded to nearest integer.
          * @returns {number} The stock price at which each share was sold, otherwise 0 if the shares weren't sold.
          */
-        sellStock (sym: StockSymbol, shares: number): number;
+        sellStock(sym: StockSymbol, shares: number): number
 
         /**
          * Attempts to purchase a short position of a stock using a Market Order.
@@ -1253,7 +1253,7 @@ declare module "Bitburner" {
          * @param {number} shares Number of shares to short. Must be positive. Will be rounded to nearest integer.
          * @returns {number} The stock price at which each share was purchased, otherwise 0 if the shares weren't purchased.
          */
-        shortStock (sym: StockSymbol, shares: number): number;
+        shortStock(sym: StockSymbol, shares: number): number
 
         /**
          * Attempts to sell a short position of a stock using a Market Order.
@@ -1273,7 +1273,7 @@ declare module "Bitburner" {
          * @param {number} shares Number of shares to sell. Must be positive. Will be rounded to nearest integer.
          * @returns {number} The stock price at which each share was sold, otherwise 0 if the shares weren't sold.
          */
-        sellShort (sym: StockSymbol, shares: number): number;
+        sellShort(sym: StockSymbol, shares: number): number
 
         /**
          * Places an order on the stock market. This function only works for Limit and Stop Orders.
@@ -1291,13 +1291,13 @@ declare module "Bitburner" {
          * @param {string} pos Specifies whether the order is a “Long” or “Short” position.
          * @returns {boolean} True if the order is successfully placed, and false otherwise.
          */
-        placeOrder (
+        placeOrder(
             sym: StockSymbol,
             shares: number,
             price: number,
             type: OrderType,
             pos: OrderPos,
-        ): boolean;
+        ): boolean
 
         /**
          * Cancels an oustanding Limit or Stop order on the stock market.
@@ -1312,13 +1312,13 @@ declare module "Bitburner" {
          * @param {string} type Type of order.
          * @param {string} pos Specifies whether the order is a “Long” or “Short” position.
          */
-        cancelOrder (
+        cancelOrder(
             sym: StockSymbol,
             shares: number,
             price: number,
             type: OrderType,
             pos: OrderPos,
-        ): void;
+        ): void
 
         /**
          * Returns your order book for the stock market.
@@ -1384,7 +1384,7 @@ declare module "Bitburner" {
          * @ramCost 2.5 GB
          * @returns {object} Object containing information for all the Limit and Stop Orders you have in the stock market.
          */
-        getOrders (): StockOrder;
+        getOrders(): StockOrder
 
         /**
          * Returns the volatility of the specified stock.
@@ -1399,7 +1399,7 @@ declare module "Bitburner" {
          * @param {string} sym Stock symbol.
          * @returns {number} Volatility of the specified stock.
          */
-        getStockVolatility (sym: StockSymbol): number;
+        getStockVolatility(sym: StockSymbol): number
 
         /**
          * Returns the probability that the specified stock’s price will increase (as opposed to decrease) during the next tick.
@@ -1416,7 +1416,7 @@ declare module "Bitburner" {
          * @param {string} sym Stock symbol.
          * @returns {number} Probability that the specified stock’s price will increase (as opposed to decrease) during the next tick.
          */
-        getStockForecast (sym: StockSymbol): number;
+        getStockForecast(sym: StockSymbol): number
 
         /**
          * Purchase 4S Market Data Access.
@@ -1426,7 +1426,7 @@ declare module "Bitburner" {
          * @ramCost 2.5 GB
          * @returns {boolean} True if you successfully purchased it or if you already have access, false otherwise.
          */
-        purchase4SMarketData (): boolean;
+        purchase4SMarketData(): boolean
 
         /**
          * Purchase 4S Market Data TIX API Access.
@@ -1436,7 +1436,7 @@ declare module "Bitburner" {
          * @ramCost 2.5 GB
          * @returns {boolean} True if you successfully purchased it or if you already have access, false otherwise.
          */
-        purchase4SMarketDataTixApi (): boolean;
+        purchase4SMarketDataTixApi(): boolean
     }
 
     export interface Singularity {
@@ -1457,10 +1457,10 @@ declare module "Bitburner" {
          * @param {string} courseName Name of course.
          * @returns {boolean} True if actions is successfully started, false otherwise.
          */
-        universityCourse (
+        universityCourse(
             universityName: University,
             courseName: UniversityCourse,
-        ): boolean;
+        ): boolean
 
         /**
          * If you are not in BitNode-4, then you must have Level 1 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1479,7 +1479,7 @@ declare module "Bitburner" {
          * @param {string} stat The stat you want to train.
          * @returns {boolean} True if actions is successfully started, false otherwise.
          */
-        gymWorkout (gymName: Gym, stat: GymStat): boolean;
+        gymWorkout(gymName: Gym, stat: GymStat): boolean
 
         /**
          * If you are not in BitNode-4, then you must have Level 1 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1492,7 +1492,7 @@ declare module "Bitburner" {
          * @param {string} city City to travel to.
          * @returns {boolean} True if actions is successful, false otherwise.
          */
-        travelToCity (city: City): boolean;
+        travelToCity(city: City): boolean
 
         /**
          * If you are not in BitNode-4, then you must have Level 1 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1505,7 +1505,7 @@ declare module "Bitburner" {
          * @singularity Level 1
          * @returns {boolean} True if actions is successful, false otherwise.
          */
-        purchaseTor (): boolean;
+        purchaseTor(): boolean
 
         /**
          * If you are not in BitNode-4, then you must have Level 1 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1524,7 +1524,7 @@ declare module "Bitburner" {
          * @param {string} programName Name of program to purchase.
          * @returns {boolean} True if the specified program is purchased, and false otherwise.
          */
-        purchaseProgram (programName: PurchaseableProgram): boolean;
+        purchaseProgram(programName: PurchaseableProgram): boolean
 
         /**
          * If you are not in BitNode-4, then you must have Level 1 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1540,7 +1540,7 @@ declare module "Bitburner" {
          * @singularity Level 1
          * @returns {object} Object with the Player’s stats.
          */
-        getStats (): PlayerStats;
+        getStats(): PlayerStats
 
         /**
          * If you are not in BitNode-4, then you must have Level 1 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1551,7 +1551,7 @@ declare module "Bitburner" {
          * @singularity Level 1
          * @returns {object} Object with various information about your character.
          */
-        getCharacterInformation (): CharacterInfo;
+        getCharacterInformation(): CharacterInfo
 
         /**
          * If you are not in BitNode-4, then you must have Level 1 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1564,7 +1564,7 @@ declare module "Bitburner" {
          * @singularity Level 1
          * @returns {boolean} True if the player is currently performing an ‘action’, false otherwise.
          */
-        isBusy (): boolean;
+        isBusy(): boolean
 
         /**
          * If you are not in BitNode-4, then you must have Level 1 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1586,7 +1586,7 @@ declare module "Bitburner" {
          * @singularity Level 1
          * @returns {boolean} True if the player’s action was ended, false if the player was not performing an action.
          */
-        stopAction (): boolean;
+        stopAction(): boolean
 
         /**
          * If you are not in BitNode-4, then you must have Level 2 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1600,7 +1600,7 @@ declare module "Bitburner" {
          * @singularity Level 2
          * @returns {boolean} True if the player’s home computer RAM is successfully upgraded, and false otherwise.
          */
-        upgradeHomeRam (): boolean;
+        upgradeHomeRam(): boolean
 
         /**
          * If you are not in BitNode-4, then you must have Level 2 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1611,7 +1611,7 @@ declare module "Bitburner" {
          * @singularity Level 2
          * @returns {number} Cost of upgrading the player’s home computer RAM.
          */
-        getUpgradeHomeRamCost (): number;
+        getUpgradeHomeRamCost(): number
 
         /**
          * If you are not in BitNode-4, then you must have Level 2 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1640,7 +1640,7 @@ declare module "Bitburner" {
          * @param {string} [companyName] Name of company to work for. Must be an exact match. Optional. If not specified, this argument defaults to the last job that you worked
          * @returns {boolean} True if the player starts working, and false otherwise.
          */
-        workForCompany (companyName?: CompanyName): boolean;
+        workForCompany(companyName?: CompanyName): boolean
 
         /**
          * If you are not in BitNode-4, then you must have Level 2 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1660,7 +1660,7 @@ declare module "Bitburner" {
          * @param {string} field Field to which you want to apply.
          * @returns {boolean} True if the player successfully get a job/promotion, and false otherwise.
          */
-        applyToCompany (companyName: CompanyName, field: CompanyField): boolean;
+        applyToCompany(companyName: CompanyName, field: CompanyField): boolean
 
         /**
          * If you are not in BitNode-4, then you must have Level 2 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1673,7 +1673,7 @@ declare module "Bitburner" {
          * @param {string} companyName Name of the company.
          * @returns {number} Amount of reputation you have at the specified company.
          */
-        getCompanyRep (companyName: CompanyName): number;
+        getCompanyRep(companyName: CompanyName): number
 
         /**
          * If you are not in BitNode-4, then you must have Level 2 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1686,7 +1686,7 @@ declare module "Bitburner" {
          * @param {string} companyName Name of the company.
          * @returns {number} Amount of favor you have at the specified company.
          */
-        getCompanyFavor (companyName: CompanyName): number;
+        getCompanyFavor(companyName: CompanyName): number
 
         /**
          * If you are not in BitNode-4, then you must have Level 2 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1699,7 +1699,7 @@ declare module "Bitburner" {
          * @param {string} companyName Name of the company.
          * @returns {number} Amount of favor you gain at the specified company when you reset by installing Augmentations.
          */
-        getCompanyFavorGain (companyName: CompanyName): number;
+        getCompanyFavorGain(companyName: CompanyName): number
 
         /**
          * If you are not in BitNode-4, then you must have Level 2 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1710,7 +1710,7 @@ declare module "Bitburner" {
          * @singularity Level 2
          * @returns {string[]} Array with the name of all Factions you currently have oustanding invitations from.
          */
-        checkFactionInvitations (): FactionName[];
+        checkFactionInvitations(): FactionName[]
 
         /**
          * If you are not in BitNode-4, then you must have Level 2 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1722,7 +1722,7 @@ declare module "Bitburner" {
          * @param {string} faction Name of faction to join.
          * @returns {boolean} True if player joined the faction, and false otherwise.
          */
-        joinFaction (faction: FactionName): boolean;
+        joinFaction(faction: FactionName): boolean
 
         /**
          * If you are not in BitNode-4, then you must have Level 2 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1752,7 +1752,7 @@ declare module "Bitburner" {
          * @param {string} workType Type of work to perform for the faction.
          * @returns {boolean} True if the player starts working, and false otherwise.
          */
-        workForFaction (faction: FactionName, workType: FactionWork): boolean;
+        workForFaction(faction: FactionName, workType: FactionWork): boolean
 
         /**
          * If you are not in BitNode-4, then you must have Level 2 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1764,7 +1764,7 @@ declare module "Bitburner" {
          * @param {string} faction Name of faction to work for.
          * @returns {number} Amount of reputation you have for the specified faction.
          */
-        getFactionRep (faction: FactionName): number;
+        getFactionRep(faction: FactionName): number
 
         /**
          * If you are not in BitNode-4, then you must have Level 2 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1776,7 +1776,7 @@ declare module "Bitburner" {
          * @param {string} faction Name of faction.
          * @returns {number} Amount of favor you have for the specified faction.
          */
-        getFactionFavor (faction: FactionName): number;
+        getFactionFavor(faction: FactionName): number
 
         /**
          * If you are not in BitNode-4, then you must have Level 2 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1789,7 +1789,7 @@ declare module "Bitburner" {
          * @param {string} faction Name of faction.
          * @returns {number} Amount of favor you will gain for the specified faction when you reset by installing Augmentations.
          */
-        getFactionFavorGain (faction: FactionName): number;
+        getFactionFavorGain(faction: FactionName): number
 
         /**
          * If you are not in BitNode-4, then you must have Level 3 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1803,7 +1803,7 @@ declare module "Bitburner" {
          * @param {string} amount Amount of money to donate.
          * @returns {boolean} True if the money was donated, and false otherwise.
          */
-        donateToFaction (faction: FactionName, amount: number): boolean;
+        donateToFaction(faction: FactionName, amount: number): boolean
 
         /**
          * If you are not in BitNode-4, then you must have Level 3 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1836,7 +1836,7 @@ declare module "Bitburner" {
          * @param {string} program Name of program to create.
          * @returns {boolean} True if you successfully start working on the specified program, and false otherwise.
          */
-        createProgram (program: CreatableProgram): boolean;
+        createProgram(program: CreatableProgram): boolean
 
         /**
          * If you are not in BitNode-4, then you must have Level 3 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1862,7 +1862,7 @@ declare module "Bitburner" {
          * @param {string} crime Name of crime to attempt.
          * @returns {number} True if you successfully start working on the specified program, and false otherwise.
          */
-        commitCrime (crime: Crime): number;
+        commitCrime(crime: Crime): number
 
         /**
          * If you are not in BitNode-4, then you must have Level 3 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1875,7 +1875,7 @@ declare module "Bitburner" {
          * @param {string} crime Name of crime.
          * @returns {number} Chance of success at commiting the specified crime as a decimal.
          */
-        getCrimeChance (crime: Crime): number;
+        getCrimeChance(crime: Crime): number
 
         /**
          * If you are not in BitNode-4, then you must have Level 3 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1887,7 +1887,7 @@ declare module "Bitburner" {
          * @param {string} crime Name of crime. Not case-sensitive
          * @returns {number} The stats of the crime.
          */
-        getCrimeStats (crime: Crime): CrimeStats;
+        getCrimeStats(crime: Crime): CrimeStats
 
         /**
          * If you are not in BitNode-4, then you must have Level 3 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1899,7 +1899,7 @@ declare module "Bitburner" {
          * @param {boolean} [purchased] Specifies whether the returned array should include Augmentations you have purchased but not yet installed. By default, this argument is false which means that the return value will NOT have the purchased Augmentations.
          * @returns {string[]} Array containing the names (as strings) of all Augmentations you have.
          */
-        getOwnedAugmentations (purchased?: boolean): AugmentName[];
+        getOwnedAugmentations(purchased?: boolean): AugmentName[]
 
         /**
          * If you are not in BitNode-4, then you must have Level 3 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1910,7 +1910,7 @@ declare module "Bitburner" {
          * @singularity Level 3
          * @returns {object[]} Array containing an object with number and level of the source file.
          */
-        getOwnedSourceFiles (): SourceFileLvl[];
+        getOwnedSourceFiles(): SourceFileLvl[]
 
         /**
          * If you are not in BitNode-4, then you must have Level 3 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1923,7 +1923,7 @@ declare module "Bitburner" {
          * @param {string} faction Name of faction.
          * @returns {string[]} Array containing the names of all Augmentations.
          */
-        getAugmentationsFromFaction (faction: FactionName): AugmentName[];
+        getAugmentationsFromFaction(faction: FactionName): AugmentName[]
 
         /**
          * If you are not in BitNode-4, then you must have Level 3 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1936,7 +1936,7 @@ declare module "Bitburner" {
          * @param {string} augName Name of Augmentation.
          * @returns {string[]} Array with the names of the prerequisite Augmentation(s) for the specified Augmentation.
          */
-        getAugmentationPrereq (augName: AugmentName): AugmentName[];
+        getAugmentationPrereq(augName: AugmentName): AugmentName[]
 
         /**
          * If you are not in BitNode-4, then you must have Level 3 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1954,7 +1954,7 @@ declare module "Bitburner" {
          * @param {string} augName Name of Augmentation.
          * @returns {[number, number]} Array with first element as a reputation requirement and second element as the money cost.
          */
-        getAugmentationCost (augName: AugmentName): [number, number];
+        getAugmentationCost(augName: AugmentName): [number, number]
 
         /**
          * If you are not in BitNode-4, then you must have Level 3 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1969,7 +1969,7 @@ declare module "Bitburner" {
          * @param {string} augmnet Name of Augmentation to purchase.
          * @returns {boolean} True if the Augmentation is successfully purchased, and false otherwise.
          */
-        purchaseAugmentation (faction: FactionName, augmnet: AugmentName): boolean;
+        purchaseAugmentation(faction: FactionName, augmnet: AugmentName): boolean
 
         /**
          * If you are not in BitNode-4, then you must have Level 3 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1981,7 +1981,7 @@ declare module "Bitburner" {
          * @param {string} name Name of Augmentation. CASE-SENSITIVE.
          * @returns {object} Augmentation stats.
          */
-        getAugmentationStats (name: AugmentName): AugmentationStats;
+        getAugmentationStats(name: AugmentName): AugmentationStats
 
         /**
          * If you are not in BitNode-4, then you must have Level 3 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -1992,7 +1992,7 @@ declare module "Bitburner" {
          * @singularity Level 3
          * @param {string} cbScript Optional callback script. This is a script that will automatically be run after Augmentations are installed (after the reset). This script will be run with no arguments and 1 thread. It must be located on your home computer.
          */
-        installAugmentations (cbScript?: Script): void;
+        installAugmentations(cbScript?: Script): void
 
         /**
          * If you are not in BitNode-4, then you must have Level 3 of Source-File 4 in order to use this function and the RAM cost is doubled.
@@ -2002,7 +2002,7 @@ declare module "Bitburner" {
          * @ramCost 5 GB
          * @singularity Level 3
          */
-        softReset (): void;
+        softReset(): void
     }
 
     export interface HackNet {
@@ -2012,7 +2012,7 @@ declare module "Bitburner" {
          * @ramCost 0 GB
          * @returns {number} number of hacknet nodes.
          */
-        numNodes (): number;
+        numNodes(): number
 
         /**
          * Purchases a new Hacknet Node. Returns a number with the index of the
@@ -2025,7 +2025,7 @@ declare module "Bitburner" {
          * @ramCost 0 GB
          * @returns {number} The index of the Hacknet Node or if the player cannot afford to purchase a new Hacknet Node the function will return -1.
          */
-        purchaseNode (): number;
+        purchaseNode(): number
 
         /**
          * Returns the cost of purchasing a new Hacknet Node.
@@ -2033,7 +2033,7 @@ declare module "Bitburner" {
          * @ramCost 0 GB
          * @returns {number} Cost of purchasing a new Hacknet Node.
          */
-        getPurchaseNodeCost (): number;
+        getPurchaseNodeCost(): number
 
         /**
          * Returns an object containing a variety of stats about the specified Hacknet Node.
@@ -2046,7 +2046,7 @@ declare module "Bitburner" {
          * @param {number} index Index/Identifier of Hacknet Node
          * @returns {object} Object containing a variety of stats about the specified Hacknet Node.
          */
-        getNodeStats (index: number): NodeStats;
+        getNodeStats(index: number): NodeStats
 
         /**
          * Tries to upgrade the level of the specified Hacknet Node by n.
@@ -2061,7 +2061,7 @@ declare module "Bitburner" {
          * @param {number} n Number of levels to purchase. Must be positive. Rounded to nearest integer.
          * @returns {boolean} True if the Hacknet Node’s level is successfully upgraded, false otherwise.
          */
-        upgradeLevel (index: number, n: number): boolean;
+        upgradeLevel(index: number, n: number): boolean
 
         /**
          * Tries to upgrade the specified Hacknet Node’s RAM n times.
@@ -2078,7 +2078,7 @@ declare module "Bitburner" {
          * @param {number} n Number of times to upgrade RAM. Must be positive. Rounded to nearest integer.
          * @returns {boolean} True if the Hacknet Node’s ram is successfully upgraded, false otherwise.
          */
-        upgradeRam (index: number, n: number): boolean;
+        upgradeRam(index: number, n: number): boolean
 
         /**
          * Tries to purchase n cores for the specified Hacknet Node.
@@ -2093,7 +2093,7 @@ declare module "Bitburner" {
          * @param {number} n Number of cores to purchase. Must be positive. Rounded to nearest integer.
          * @returns {boolean} True if the Hacknet Node’s cores are successfully purchased, false otherwise.
          */
-        upgradeCore (index: number, n: number): boolean;
+        upgradeCore(index: number, n: number): boolean
 
         /**
          * This function is only applicable for Hacknet Servers (the upgraded version of a Hacknet Node).
@@ -2110,7 +2110,7 @@ declare module "Bitburner" {
          * @param {number} n Number of cache levels to purchase. Must be positive. Rounded to nearest integer.
          * @returns {boolean} True if the Hacknet Node’s cores are successfully purchased, false otherwise.
          */
-        upgradeCache (index: number, n: number): boolean;
+        upgradeCache(index: number, n: number): boolean
 
         /**
          * Returns the cost of upgrading the specified Hacknet Node by n levels.
@@ -2123,7 +2123,7 @@ declare module "Bitburner" {
          * @param {number} n Number of levels to upgrade. Must be positive. Rounded to nearest integer.
          * @returns {number} Cost of upgrading the specified Hacknet Node.
          */
-        getLevelUpgradeCost (index: number, n: number): number;
+        getLevelUpgradeCost(index: number, n: number): number
 
         /**
          * Returns the cost of upgrading the RAM of the specified Hacknet Node n times.
@@ -2136,7 +2136,7 @@ declare module "Bitburner" {
          * @param {number} n Number of times to upgrade RAM. Must be positive. Rounded to nearest integer.
          * @returns {number} Cost of upgrading the specified Hacknet Node's ram.
          */
-        getRamUpgradeCost (index: number, n: number): number;
+        getRamUpgradeCost(index: number, n: number): number
 
         /**
          * Returns the cost of upgrading the number of cores of the specified Hacknet Node by n.
@@ -2149,7 +2149,7 @@ declare module "Bitburner" {
          * @param {number} n Number of times to upgrade cores. Must be positive. Rounded to nearest integer.
          * @returns {number} Cost of upgrading the specified Hacknet Node's number of cores.
          */
-        getCoreUpgradeCost (index: number, n: number): number;
+        getCoreUpgradeCost(index: number, n: number): number
 
         /**
          * This function is only applicable for Hacknet Servers (the upgraded version of a Hacknet Node).
@@ -2164,7 +2164,7 @@ declare module "Bitburner" {
          * @param {number} n Number of times to upgrade cache. Must be positive. Rounded to nearest integer.
          * @returns {number} Cost of upgrading the specified Hacknet Node's cache.
          */
-        getCacheUpgradeCost (index: number, n: number): number;
+        getCacheUpgradeCost(index: number, n: number): number
 
         /**
          * This function is only applicable for Hacknet Servers (the upgraded version of a Hacknet Node).
@@ -2174,7 +2174,7 @@ declare module "Bitburner" {
          * @ramCost 0 GB
          * @returns {number} Number of hashes you have.
          */
-        numHashes (): number;
+        numHashes(): number
 
         /**
          * This function is only applicable for Hacknet Servers (the upgraded version of a Hacknet Node).
@@ -2192,7 +2192,7 @@ declare module "Bitburner" {
          * @param {string} upgName Name of the upgrade of Hacknet Node.
          * @returns {number} Number of hashes required for the specified upgrade.
          */
-        hashCost (upgName: HashUpgrades): number;
+        hashCost(upgName: HashUpgrades): number
 
         /**
          * This function is only applicable for Hacknet Servers (the upgraded version of a Hacknet Node).
@@ -2214,7 +2214,7 @@ declare module "Bitburner" {
          * @param {string} [upgTarget] Object to which upgrade applies. Required for certain upgrades.
          * @returns {boolean} True if the upgrade is successfully purchased, and false otherwise..
          */
-        spendHashes (upgName: HashUpgrades, upgTarget?: Host): boolean;
+        spendHashes(upgName: HashUpgrades, upgTarget?: Host): boolean
     }
 
     export interface BladeBurner {
@@ -2227,7 +2227,7 @@ declare module "Bitburner" {
          * @ramCost 0.4 GB
          * @returns {string[]} Array of strings containing the names of all Bladeburner contracts.
          */
-        getContractNames (): BladeburnerContracts[];
+        getContractNames(): BladeburnerContracts[]
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2238,7 +2238,7 @@ declare module "Bitburner" {
          * @ramCost 0.4 GB
          * @returns {string[]} Array of strings containing the names of all Bladeburner operations.
          */
-        getOperationNames (): BladeburnerOperations[];
+        getOperationNames(): BladeburnerOperations[]
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2249,7 +2249,7 @@ declare module "Bitburner" {
          * @ramCost 0.4 GB
          * @returns {string[]} Array of strings containing the names of all Bladeburner Black Ops.
          */
-        getBlackOpNames (): BladeburnerBlackOps[];
+        getBlackOpNames(): BladeburnerBlackOps[]
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2260,7 +2260,7 @@ declare module "Bitburner" {
          * @ramCost 0.4 GB
          * @returns {string[]} Array of strings containing the names of all general Bladeburner actions.
          */
-        getGeneralActionNames (): BladeburnerGenActions[];
+        getGeneralActionNames(): BladeburnerGenActions[]
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2271,7 +2271,7 @@ declare module "Bitburner" {
          * @ramCost 0.4 GB
          * @returns {string[]} Array of strings containing the names of all general Bladeburner skills.
          */
-        getSkillNames (): BladeburnerSkills[];
+        getSkillNames(): BladeburnerSkills[]
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2285,10 +2285,10 @@ declare module "Bitburner" {
          * @param {string} name Name of action. Must be an exact match
          * @returns {boolean} True if the action was started successfully, and false otherwise.
          */
-        startAction (
+        startAction(
             type: BladeburnerActTypes,
             name: BladeburnerGenActions | BladeburnerContracts | BladeburnerOperations | BladeburnerBlackOps
-        ): boolean;
+        ): boolean
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2298,7 +2298,7 @@ declare module "Bitburner" {
          *
          * @ramCost 2 GB
          */
-        stopBladeburnerAction (): void;
+        stopBladeburnerAction(): void
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2310,7 +2310,7 @@ declare module "Bitburner" {
          * @ramCost 1 GB
          * @returns {object} Object that represents the player’s current Bladeburner action.
          */
-        getCurrentAction (): BladeburnerCurAction;
+        getCurrentAction(): BladeburnerCurAction
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2323,10 +2323,10 @@ declare module "Bitburner" {
          * @param {string} name Name of action. Must be an exact match.
          * @returns {number} Number of seconds it takes to complete the specified action.
          */
-        getActionTime (
+        getActionTime(
             type: BladeburnerActTypes,
             name: BladeburnerGenActions | BladeburnerContracts | BladeburnerOperations | BladeburnerBlackOps
-        ): number;
+        ): number
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2341,10 +2341,10 @@ declare module "Bitburner" {
          * @param {string} name Name of action. Must be an exact match.
          * @returns {number} Estimated success chance for the specified action.
          */
-        getActionEstimatedSuccessChance (
+        getActionEstimatedSuccessChance(
             type: BladeburnerActTypes,
             name: BladeburnerGenActions | BladeburnerContracts | BladeburnerOperations | BladeburnerBlackOps
-        ): number;
+        ): number
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2360,11 +2360,11 @@ declare module "Bitburner" {
          * @param {number} [level] Optional action level at which to calculate the gain
          * @returns {number} Average Bladeburner reputation gain for successfully completing the specified action.
          */
-        getActionRepGain (
+        getActionRepGain(
             type: BladeburnerActTypes,
             name: BladeburnerGenActions | BladeburnerContracts | BladeburnerOperations | BladeburnerBlackOps,
             level: number
-        ): number;
+        ): number
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2382,10 +2382,10 @@ declare module "Bitburner" {
          * @param {string} name Name of action. Must be an exact match.
          * @returns {number} Remaining count of the specified action.
          */
-        getActionCountRemaining (
+        getActionCountRemaining(
             type: BladeburnerActTypes,
             name: BladeburnerGenActions | BladeburnerContracts | BladeburnerOperations | BladeburnerBlackOps
-        ): number;
+        ): number
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2400,10 +2400,10 @@ declare module "Bitburner" {
          * @param {string} name Name of action. Must be an exact match.
          * @returns {number} Maximum level of the specified action.
          */
-        getActionMaxLevel (
+        getActionMaxLevel(
             type: BladeburnerActTypes,
             name: BladeburnerGenActions | BladeburnerContracts | BladeburnerOperations | BladeburnerBlackOps
-        ): number;
+        ): number
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2418,10 +2418,10 @@ declare module "Bitburner" {
          * @param {string} name Name of action. Must be an exact match.
          * @returns {number} Current level of the specified action.
          */
-        getActionCurrentLevel (
+        getActionCurrentLevel(
             type: BladeburnerActTypes,
             name: BladeburnerGenActions | BladeburnerContracts | BladeburnerOperations | BladeburnerBlackOps
-        ): number;
+        ): number
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2436,10 +2436,10 @@ declare module "Bitburner" {
          * @param {string} name Name of action. Must be an exact match.
          * @returns {boolean} True if the action is set to autolevel, and false otherwise.
          */
-        getActionAutolevel (
+        getActionAutolevel(
             type: BladeburnerActTypes,
             name: BladeburnerGenActions | BladeburnerContracts | BladeburnerOperations | BladeburnerBlackOps
-        ): boolean;
+        ): boolean
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2452,11 +2452,11 @@ declare module "Bitburner" {
          * @param {string} name Name of action. Must be an exact match.
          * @param {boolean} autoLevel Whether or not to autolevel this action
          */
-        setActionAutolevel (
+        setActionAutolevel(
             type: BladeburnerActTypes,
             name: BladeburnerGenActions | BladeburnerContracts | BladeburnerOperations | BladeburnerBlackOps,
             autoLevel: boolean
-        ): void;
+        ): void
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2469,11 +2469,11 @@ declare module "Bitburner" {
          * @param {string} name Name of action. Must be an exact match.
          * @param {number} level Level to set this action to.
          */
-        setActionLevel (
+        setActionLevel(
             type: BladeburnerActTypes,
             name: BladeburnerGenActions | BladeburnerContracts | BladeburnerOperations | BladeburnerBlackOps,
             level: number
-        ): void;
+        ): void
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2484,7 +2484,7 @@ declare module "Bitburner" {
          * @ramCost 4 GB
          * @returns {number} Player’s Bladeburner Rank.
          */
-        getRank (): number;
+        getRank(): number
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2498,7 +2498,7 @@ declare module "Bitburner" {
          * @param {string} name Name of BlackOp. Must be an exact match.
          * @returns {number} Rank required to complete this BlackOp.
          */
-        getBlackOpRank (name: BladeburnerBlackOps): number;
+        getBlackOpRank(name: BladeburnerBlackOps): number
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2509,7 +2509,7 @@ declare module "Bitburner" {
          * @ramCost 4 GB
          * @returns {number} Number of Bladeburner skill points you have.
          */
-        getSkillPoints (): number;
+        getSkillPoints(): number
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2523,7 +2523,7 @@ declare module "Bitburner" {
          * @param {string} skillName Name of skill. Case-sensitive and must be an exact match
          * @returns {number} Level in the specified skill.
          */
-        getSkillLevel (name: BladeburnerSkills): number;
+        getSkillLevel(name: BladeburnerSkills): number
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2537,7 +2537,7 @@ declare module "Bitburner" {
          * @param {string} skillName Name of skill. Case-sensitive and must be an exact match
          * @returns {number} Number of skill points needed to upgrade the specified skill.
          */
-        getSkillUpgradeCost (name: BladeburnerSkills): number;
+        getSkillUpgradeCost(name: BladeburnerSkills): number
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2551,7 +2551,7 @@ declare module "Bitburner" {
          * @param {string} skillName Name of skill to be upgraded. Case-sensitive and must be an exact match
          * @returns {boolean} true if the skill is successfully upgraded, and false otherwise.
          */
-        upgradeSkill (name: BladeburnerSkills): boolean;
+        upgradeSkill(name: BladeburnerSkills): boolean
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2566,10 +2566,10 @@ declare module "Bitburner" {
          * @param {string} name Name of action. Must be an exact match.
          * @returns {number} Number of Bladeburner team members that were assigned to the specified action.
          */
-        getTeamSize (
+        getTeamSize(
             type: BladeburnerActTypes,
             name: BladeburnerGenActions | BladeburnerContracts | BladeburnerOperations | BladeburnerBlackOps
-        ): number;
+        ): number
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2585,11 +2585,11 @@ declare module "Bitburner" {
          * @param {number} size Number of team members to set. Will be converted using Math.round().
          * @returns {number} Number of Bladeburner team members you assigned to the specified action.
          */
-        setTeamSize (
+        setTeamSize(
             type: BladeburnerActTypes,
             name: BladeburnerGenActions | BladeburnerContracts | BladeburnerOperations | BladeburnerBlackOps,
             size: number
-        ): number;
+        ): number
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2602,7 +2602,7 @@ declare module "Bitburner" {
          * @param {string} cityName Name of city. Case-sensitive
          * @returns {number} Estimated number of Synthoids in the specified city.
          */
-        getCityEstimatedPopulation (name: City): number;
+        getCityEstimatedPopulation(name: City): number
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2615,7 +2615,7 @@ declare module "Bitburner" {
          * @param {string} cityName Name of city. Case-sensitive
          * @returns {number} Estimated number of Synthoids communities in the specified city.
          */
-        getCityEstimatedCommunities (name: City): number;
+        getCityEstimatedCommunities(name: City): number
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2628,7 +2628,7 @@ declare module "Bitburner" {
          * @param {string} cityName Name of city. Case-sensitive
          * @returns {number} Chaos in the specified city.
          */
-        getCityChaos (name: City): number;
+        getCityChaos(name: City): number
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2639,7 +2639,7 @@ declare module "Bitburner" {
          * @ramCost 4 GB
          * @returns {string} City that the player is currently in (for Bladeburner).
          */
-        getCity (): City;
+        getCity(): City
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2653,7 +2653,7 @@ declare module "Bitburner" {
          * @param {string} cityName Name of city. Case-sensitive
          * @returns {boolean} true if successful, and false otherwise
          */
-        switchCity (name: City): boolean;
+        switchCity(name: City): boolean
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2671,7 +2671,7 @@ declare module "Bitburner" {
          * @ramCost 4 GB
          * @returns {[number, number]} Array containing current stamina and max stamina.
          */
-        getStamina (): [number, number];
+        getStamina(): [number, number]
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2686,7 +2686,7 @@ declare module "Bitburner" {
          * @ramCost 4 GB
          * @returns {boolean} True if you successfully join the Bladeburner faction, or if you are already a member, false otherwise.
          */
-        joinBladeburnerFaction (): boolean;
+        joinBladeburnerFaction(): boolean
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2701,7 +2701,7 @@ declare module "Bitburner" {
          * @ramCost 4 GB
          * @returns {boolean} True if you successfully join the Bladeburner division, or if you are already a member, false otherwise.
          */
-        joinBladeburnerDivision (): boolean;
+        joinBladeburnerDivision(): boolean
 
         /**
          * You have to be employed in the Bladeburner division and be in BitNode-7
@@ -2718,7 +2718,7 @@ declare module "Bitburner" {
          * @ramCost 0 GB
          * @returns {number} Amount of accumulated “bonus time” (seconds) for the Bladeburner mechanic.
          */
-        getBonusTime (): number;
+        getBonusTime(): number
     }
 
     export interface CodingContract {
@@ -2731,11 +2731,11 @@ declare module "Bitburner" {
          * @param {string} [host] Host or IP of the server containing the contract. Optional. Defaults to current server if not provided.
          * @returns {boolean} True if the solution was correct, false otherwise.
          */
-        attempt (
+        attempt(
             answer: string | string[] | number,
             fn: string,
             host?: Host
-        ): boolean;
+        ): boolean
 
         /**
          * Attempts to solve the Coding Contract with the provided solution.
@@ -2747,12 +2747,12 @@ declare module "Bitburner" {
          * @param {object} [opts] Optional parameters for configuring function behavior.
          * @returns {boolean} True if the solution was correct, false otherwise. If the returnReward option is configured, then the function will instead return a string. If the contract is successfully solved, the string will contain a description of the contract’s reward. Otherwise, it will be an empty string.
          */
-        attempt (
+        attempt(
             answer: string | string[] | number,
             fn: string,
             host?: Host,
             opts?: CodingAttemptOptions
-        ): boolean | string;
+        ): boolean | string
 
         /**
          * Returns a name describing the type of problem posed by the Coding Contract.
@@ -2763,7 +2763,7 @@ declare module "Bitburner" {
          * @param {string} [host] Host or IP of the server containing the contract. Optional. Defaults to current server if not provided.
          * @returns {string} Name describing the type of problem posed by the Coding Contract.
          */
-        getContractType (fn: string, host?: Host): CodingContractTypes;
+        getContractType(fn: string, host?: Host): CodingContractTypes
 
         /**
          * Get the full text description for the problem posed by the Coding Contract.
@@ -2773,7 +2773,7 @@ declare module "Bitburner" {
          * @param {string} [host] Host or IP of the server containing the contract. Optional. Defaults to current server if not provided.
          * @returns {string} Contract’s text description.
          */
-        getDescription (fn: string, host?: Host): string;
+        getDescription(fn: string, host?: Host): string
 
         /**
          * Get the data associated with the specific Coding Contract.
@@ -2785,7 +2785,7 @@ declare module "Bitburner" {
          * @param {string} [host] Host or IP of the server containing the contract. Optional. Defaults to current server if not provided.
          * @returns {string} The specified contract’s data;
          */
-        getData (fn: string, host?: Host): string;
+        getData(fn: string, host?: Host): string
 
         /**
          * Get the number of tries remaining on the contract before it self-destructs.
@@ -2795,7 +2795,7 @@ declare module "Bitburner" {
          * @param {string} [host] Host or IP of the server containing the contract. Optional. Defaults to current server if not provided.
          * @returns {number} How many attempts are remaining for the contract;
          */
-        getNumTriesRemaining (fn: string, host?: Host): number;
+        getNumTriesRemaining(fn: string, host?: Host): number
     }
 
     export interface Gang {
@@ -2808,7 +2808,7 @@ declare module "Bitburner" {
          * @ramCost 1 GB
          * @returns {string[]} Names of all Gang members.
          */
-        getMemberNames (): string[];
+        getMemberNames(): string[]
 
         /**
          * If you are not in BitNode-2, then you must have Source-File 2 in order to use this function.
@@ -2818,7 +2818,7 @@ declare module "Bitburner" {
          * @ramCost 2 GB
          * @returns {object} Object containing general information about the gang.
          */
-        getGangInformation (): GangGenInfo;
+        getGangInformation(): GangGenInfo
 
         /**
          * If you are not in BitNode-2, then you must have Source-File 2 in order to use this function.
@@ -2828,7 +2828,7 @@ declare module "Bitburner" {
          * @ramCost 2 GB
          * @returns {object} Object containing territory and power information about all gangs.
          */
-        getOtherGangInformation (): GangOtherInfo;
+        getOtherGangInformation(): GangOtherInfo
 
         /**
          * If you are not in BitNode-2, then you must have Source-File 2 in order to use this function.
@@ -2839,7 +2839,7 @@ declare module "Bitburner" {
          * @param {string} name Name of member.
          * @returns {object} Object containing stat and equipment-related information about a Gang Member.
          */
-        getMemberInformation (name: string): GangMemberInfo;
+        getMemberInformation(name: string): GangMemberInfo
 
         /**
          * If you are not in BitNode-2, then you must have Source-File 2 in order to use this function.
@@ -2849,7 +2849,7 @@ declare module "Bitburner" {
          * @ramCost 1 GB
          * @returns {boolean} True if a member can currently be recruited, false otherwise.
          */
-        canRecruitMember (): boolean;
+        canRecruitMember(): boolean
 
         /**
          * If you are not in BitNode-2, then you must have Source-File 2 in order to use this function.
@@ -2864,7 +2864,7 @@ declare module "Bitburner" {
          * @param {string} name Name of member to recruit.
          * @returns {boolean} True if the member was successfully recruited, false otherwise.
          */
-        recruitMember (name: string): boolean;
+        recruitMember(name: string): boolean
 
         /**
          * If you are not in BitNode-2, then you must have Source-File 2 in order to use this function.
@@ -2874,7 +2874,7 @@ declare module "Bitburner" {
          * @ramCost 1 GB
          * @returns {string[]} All valid tasks that Gang members can be assigned to.
          */
-        getTaskNames (): GangTasks[];
+        getTaskNames(): GangTasks[]
 
         /**
          * If you are not in BitNode-2, then you must have Source-File 2 in order to use this function.
@@ -2887,7 +2887,7 @@ declare module "Bitburner" {
          * @param {string} taskName Task to assign.
          * @returns {boolean} True if the Gang Member was successfully assigned to the task, false otherwise.
          */
-        setMemberTask (memberName: string, taskName: GangTasks): boolean;
+        setMemberTask(memberName: string, taskName: GangTasks): boolean
 
         /**
          * If you are not in BitNode-2, then you must have Source-File 2 in order to use this function.
@@ -2898,7 +2898,7 @@ declare module "Bitburner" {
          * @param {string} name  Name of the task.
          * @returns {boolean} Detailed stats of a task.
          */
-        getTaskStats (name: GangTasks): GangTasksStats;
+        getTaskStats(name: GangTasks): GangTasksStats
 
         /**
          * If you are not in BitNode-2, then you must have Source-File 2 in order to use this function.
@@ -2909,7 +2909,7 @@ declare module "Bitburner" {
          * @ramCost 1 GB
          * @returns {string[]} Names of all Equpiment/Augmentations.
          */
-        getEquipmentNames (): (GangEquipment | GangAugmentations)[];
+        getEquipmentNames(): (GangEquipment | GangAugmentations)[]
 
         /**
          * If you are not in BitNode-2, then you must have Source-File 2 in order to use this function.
@@ -2921,7 +2921,7 @@ declare module "Bitburner" {
          * @param {string} equipName Name of equipment.
          * @returns {number} Cost to purchase the specified Equipment/Augmentation (number). Infinity for invalid arguments
          */
-        getEquipmentCost (equipName: GangEquipment | GangAugmentations): number;
+        getEquipmentCost(equipName: GangEquipment | GangAugmentations): number
 
         /**
          * If you are not in BitNode-2, then you must have Source-File 2 in order to use this function.
@@ -2932,9 +2932,9 @@ declare module "Bitburner" {
          * @param {string} equipName Name of equipment.
          * @returns {number} Type of the equipment.
          */
-        getEquipmentType (
+        getEquipmentType(
             equipName: GangEquipment | GangAugmentations
-        ): GangEquipmentType;
+        ): GangEquipmentType
 
         /**
          * If you are not in BitNode-2, then you must have Source-File 2 in order to use this function.
@@ -2945,9 +2945,9 @@ declare module "Bitburner" {
          * @param {string} equipName Name of equipment.
          * @returns {object} A dictionary containing the stats of the equipment.
          */
-        getEquipmentStats (
+        getEquipmentStats(
             equipName: GangEquipment | GangAugmentations
-        ): GangEquipmentStats;
+        ): GangEquipmentStats
 
         /**
          * If you are not in BitNode-2, then you must have Source-File 2 in order to use this function.
@@ -2959,7 +2959,7 @@ declare module "Bitburner" {
          * @param {string} equipName Name of Equipment/Augmentation to purchase.
          * @returns {boolean} True if the equipment was successfully purchased. False otherwise
          */
-        purchaseEquipment (memberName: string, equipName: GangEquipment | GangAugmentations): boolean;
+        purchaseEquipment(memberName: string, equipName: GangEquipment | GangAugmentations): boolean
 
         /**
          * If you are not in BitNode-2, then you must have Source-File 2 in order to use this function.
@@ -2970,7 +2970,7 @@ declare module "Bitburner" {
          * @param {string} memberName Name of member to ascend.
          * @returns {object} Object with info about the ascension results.
          */
-        ascendMember (memberName: string): GangMemberAscension;
+        ascendMember(memberName: string): GangMemberAscension
 
         /**
          * If you are not in BitNode-2, then you must have Source-File 2 in order to use this function.
@@ -2980,7 +2980,7 @@ declare module "Bitburner" {
          * @ramCost 2 GB
          * @param {boolean} engage Whether or not to engage in territory warfare.
          */
-        setTerritoryWarfare (engage: boolean): void;
+        setTerritoryWarfare(engage: boolean): void
 
         /**
          * If you are not in BitNode-2, then you must have Source-File 2 in order to use this function.
@@ -2991,7 +2991,7 @@ declare module "Bitburner" {
          * @param {string} gangName Target gang
          * @returns {number} Chance you have to win a clash with the specified gang.
          */
-        getChanceToWinClash (gangName: GangName): number;
+        getChanceToWinClash(gangName: GangName): number
 
         /**
          * If you are not in BitNode-2, then you must have Source-File 2 in order to use this function.
@@ -3005,7 +3005,7 @@ declare module "Bitburner" {
          * @ramCost 0 GB
          * @returns {number} Bonus time for the Gang mechanic in seconds.
          */
-        getBonusTime (): number;
+        getBonusTime(): number
     }
 
     export interface Sleeve {
@@ -3017,7 +3017,7 @@ declare module "Bitburner" {
          * @ramCost 4 GB
          * @returns {number} number of duplicate sleeves the player has.
          */
-        getNumSleeves (): number;
+        getNumSleeves(): number
 
         /**
          * If you are not in BitNode-10, then you must have Source-File 10 in order to use this function.
@@ -3028,7 +3028,7 @@ declare module "Bitburner" {
          * @param {number} sleeveNumber Index of the sleeve to get stats of.
          * @returns {object} Object containing the stats of the sleeve.
          */
-        getSleeveStats (sleeveNumber: number): SleeveStats;
+        getSleeveStats(sleeveNumber: number): SleeveStats
 
         /**
          * If you are not in BitNode-10, then you must have Source-File 10 in order to use this function.
@@ -3039,7 +3039,7 @@ declare module "Bitburner" {
          * @param {number} sleeveNumber Index of the sleeve to retrieve information.
          * @returns {object} Object containing tons of information about this sleeve.
          */
-        getInformation (sleeveNumber: number): SleeveInformation;
+        getInformation(sleeveNumber: number): SleeveInformation
 
         /**
          * If you are not in BitNode-10, then you must have Source-File 10 in order to use this function.
@@ -3050,7 +3050,7 @@ declare module "Bitburner" {
          * @param {number} sleeveNumber Index of the sleeve to retrieve task from.
          * @returns {object} Object containing information the current task that the sleeve is performing.
          */
-        getTask (sleeveNumber: number): SleeveTask;
+        getTask(sleeveNumber: number): SleeveTask
 
         /**
          * If you are not in BitNode-10, then you must have Source-File 10 in order to use this function.
@@ -3061,7 +3061,7 @@ declare module "Bitburner" {
          * @param {number} sleeveNumber Index of the sleeve to start recovery.
          * @returns {boolean} True if this action was set successfully, false otherwise.
          */
-        setToShockRecovery (sleeveNumber: number): boolean;
+        setToShockRecovery(sleeveNumber: number): boolean
 
         /**
          * If you are not in BitNode-10, then you must have Source-File 10 in order to use this function.
@@ -3072,7 +3072,7 @@ declare module "Bitburner" {
          * @param {number} sleeveNumber Index of the sleeve to start synchronizing.
          * @returns {boolean} True if this action was set successfully, false otherwise.
          */
-        setToSynchronize (sleeveNumber: number): boolean;
+        setToSynchronize(sleeveNumber: number): boolean
 
         /**
          * If you are not in BitNode-10, then you must have Source-File 10 in order to use this function.
@@ -3086,7 +3086,7 @@ declare module "Bitburner" {
          * @param {string} name Name of the crime. Must be an exact match.
          * @returns {boolean} True if this action was set successfully, false otherwise.
          */
-        setToCommitCrime (sleeveNumber: number, name: Crime): boolean;
+        setToCommitCrime(sleeveNumber: number, name: Crime): boolean
 
         /**
          * If you are not in BitNode-10, then you must have Source-File 10 in order to use this function.
@@ -3099,7 +3099,7 @@ declare module "Bitburner" {
          * @param {string} factionWorkType Name of the action to perform for this faction.
          * @returns {boolean} True if the sleeve started working on this faction, false otherwise.
          */
-        setToFactionWork (sleeveNumber: number, factionName: FactionName, factionWorkType: FactionWork): boolean;
+        setToFactionWork(sleeveNumber: number, factionName: FactionName, factionWorkType: FactionWork): boolean
 
         /**
          * If you are not in BitNode-10, then you must have Source-File 10 in order to use this function.
@@ -3111,7 +3111,7 @@ declare module "Bitburner" {
          * @param {string} companyName Name of the company to work for.
          * @returns {boolean} True if the sleeve started working on this company, false otherwise.
          */
-        setToCompanyWork (sleeveNumber: number, companyName: CompanyName): boolean;
+        setToCompanyWork(sleeveNumber: number, companyName: CompanyName): boolean
 
         /**
          * If you are not in BitNode-10, then you must have Source-File 10 in order to use this function.
@@ -3124,7 +3124,7 @@ declare module "Bitburner" {
          * @param {string} className Name of the class to follow.
          * @returns {boolean} True if this action was set successfully, false otherwise.
          */
-        setToUniversityCourse (sleeveNumber: number, university: University, className: UniversityCourse): boolean;
+        setToUniversityCourse(sleeveNumber: number, university: University, className: UniversityCourse): boolean
 
         /**
          * If you are not in BitNode-10, then you must have Source-File 10 in order to use this function.
@@ -3137,7 +3137,7 @@ declare module "Bitburner" {
          * @param {string} stat Name of the stat to train.
          * @returns {boolean} True if the sleeve started working out, false otherwise.
          */
-        setToGymWorkout (sleeveNumber: number, gymName: Gym, stat: GymStat): boolean;
+        setToGymWorkout(sleeveNumber: number, gymName: Gym, stat: GymStat): boolean
 
         /**
          * If you are not in BitNode-10, then you must have Source-File 10 in order to use this function.
@@ -3149,7 +3149,7 @@ declare module "Bitburner" {
          * @param {string} cityName Name of the destination city.
          * @returns {boolean} True if the sleeve reached destination, false otherwise.
          */
-        travel (sleeveNumber: number, cityName: City): boolean;
+        travel(sleeveNumber: number, cityName: City): boolean
 
         /**
          * If you are not in BitNode-10, then you must have Source-File 10 in order to use this function.
@@ -3160,7 +3160,7 @@ declare module "Bitburner" {
          * @param {number} sleeveNumber Index of the sleeve to retrieve augmentations from.
          * @returns {string[]} List of augmentation names that this sleeve has installed.
          */
-        getSleeveAugmentations (sleeveNumber: number): AugmentName[];
+        getSleeveAugmentations(sleeveNumber: number): AugmentName[]
 
         /**
          * If you are not in BitNode-10, then you must have Source-File 10 in order to use this function.
@@ -3171,7 +3171,7 @@ declare module "Bitburner" {
          * @param {number} sleeveNumber Index of the sleeve to retrieve purchasable augmentations from.
          * @returns {string[]} List of augmentations that the player can buy for this sleeve.
          */
-        getSleevePurchasableAugs (sleeveNumber: number): AugmentPair[];
+        getSleevePurchasableAugs(sleeveNumber: number): AugmentPair[]
 
         /**
          * If you are not in BitNode-10, then you must have Source-File 10 in order to use this function.
@@ -3183,7 +3183,7 @@ declare module "Bitburner" {
          * @param {string} augName Name of the aug to buy. Must be an exact match.
          * @returns {boolean} True if the aug was purchased and installed on the sleeve, false otherwise.
          */
-        purchaseSleeveAug (sleeveNumber: number, augName: AugmentName): boolean;
+        purchaseSleeveAug(sleeveNumber: number, augName: AugmentName): boolean
     }
 
     export interface BitBurner extends TIX, Singularity {
@@ -3197,23 +3197,23 @@ declare module "Bitburner" {
          *
          * @ramCost 4 GB
          */
-        readonly hacknet: HackNet;
+        readonly hacknet: HackNet
         /**
          * @ramCost 0 GB
          */
-        readonly bladeburner: BladeBurner;
+        readonly bladeburner: BladeBurner
         /**
          * @ramCost 0 GB
          */
-        readonly codingcontract: CodingContract;
+        readonly codingcontract: CodingContract
         /**
          * @ramCost 0 GB
          */
-        readonly gang: Gang;
+        readonly gang: Gang
         /**
          * @ramCost 0 GB
          */
-        readonly sleeve: CodingContract;
+        readonly sleeve: CodingContract
 
         /**
          * Arguments passed into a script can be accessed using a normal
@@ -3227,7 +3227,7 @@ declare module "Bitburner" {
          *
          * @ramCost 0 GB
          */
-        readonly args: any[];
+        readonly args: any[]
 
         /**
          * Function that is used to try and hack servers to steal money and gain hacking experience.
@@ -3252,7 +3252,7 @@ declare module "Bitburner" {
          * @param {object} [opts] Optional parameters for configuring function behavior.
          * @returns {Promise<number>} The amount of money stolen if the hack is successful, and zero otherwise.
          */
-        hack (host: Host, opts?: BasicHGWOptions): Promise<number>;
+        hack(host: Host, opts?: BasicHGWOptions): Promise<number>
 
         /**
          * Use your hacking skills to increase the amount of money available on a server.
@@ -3277,7 +3277,7 @@ declare module "Bitburner" {
          * @param {object} [opts] Optional parameters for configuring function behavior.
          * @returns {Promise<number>} The number by which the money on the server was multiplied for the growth.
          */
-        grow (host: Host, opts?: BasicHGWOptions): Promise<number>;
+        grow(host: Host, opts?: BasicHGWOptions): Promise<number>
 
         /**
          * Use your hacking skills to attack a server’s security, lowering the server’s security level.
@@ -3298,7 +3298,7 @@ declare module "Bitburner" {
          * @param {object} [opts] Optional parameters for configuring function behavior.
          * @returns {Promise<number>} The amount by which the target server’s security level was decreased. This is equivalent to 0.05 multiplied by the number of script threads.
          */
-        weaken (host: Host, opts?: BasicHGWOptions): Promise<number>;
+        weaken(host: Host, opts?: BasicHGWOptions): Promise<number>
 
         /**
          * This function returns the number of script threads you need when running the {@link hack} command
@@ -3319,7 +3319,7 @@ declare module "Bitburner" {
          * @param {number} hackAmount Amount of money you want to hack from the server.
          * @returns {number} The number of threads needed to {@link hack} the server for hackAmount money.
          */
-        hackAnalyzeThreads (host: Host, hackAmount: number): number;
+        hackAnalyzeThreads(host: Host, hackAmount: number): number
 
         /**
          * Returns the percentage of the specified server’s money you will steal with a single hack.
@@ -3336,7 +3336,7 @@ declare module "Bitburner" {
          * @param {string} host IP or hostname of the target server.
          * @returns {number} The percentage of money you will steal from the target server with a single hack.
          */
-        hackAnalyzePercent (host: Host): number;
+        hackAnalyzePercent(host: Host): number
 
         /**
          * Returns the chance you have of successfully hacking the specified server.
@@ -3347,7 +3347,7 @@ declare module "Bitburner" {
          * @param {string} host IP or hostname of the target server.
          * @returns {number} The chance you have of successfully hacking the target server.
          */
-        hackChance (host: Host): number;
+        hackChance(host: Host): number
 
         /**
          * This function returns the number of “growths” needed in order to increase
@@ -3367,7 +3367,7 @@ declare module "Bitburner" {
          * @param {number} growthAmount Multiplicative factor by which the server is grown. Decimal form..
          * @returns {number} The amount of {@link grow} calls needed to grow the specified server by the specified amount
          */
-        growthAnalyze (host: Host, growthAmount: number): number;
+        growthAnalyze(host: Host, growthAmount: number): number
 
         /**
          * Suspends the script for n milliseconds.
@@ -3376,7 +3376,7 @@ declare module "Bitburner" {
          * @param {number} millis Number of milliseconds to sleep.
          * @returns {Promise<void>}
          */
-        sleep (millis: number): Promise<void>;
+        sleep(millis: number): Promise<void>
 
         /**
          * Prints a value or a variable to the script’s logs.
@@ -3384,7 +3384,7 @@ declare module "Bitburner" {
          * @ramCost 0 GB
          * @param {string} msg Value to be printed.
          */
-        print (msg: string | number | string[] | number[]): void;
+        print(msg: string | number | string[] | number[]): void
 
         /**
          * Prints a value or a variable to the Terminal.
@@ -3392,14 +3392,14 @@ declare module "Bitburner" {
          * @ramCost 0 GB
          * @param {string} msg Value to be printed.
          */
-        tprint (msg: string | number | string[] | number[]): void;
+        tprint(msg: string | number | string[] | number[]): void
 
         /**
          * Clears the script’s logs.
          *
          * @ramCost 0 GB
          */
-        clearLog (): void;
+        clearLog(): void
 
         /**
          * Disables logging for the given function. Logging can be disabled
@@ -3415,7 +3415,7 @@ declare module "Bitburner" {
          * @ramCost 0 GB
          * @param {string} fn Name of function for which to disable logging.
          */
-        disableLog (fn: string): void;
+        disableLog(fn: string): void
 
         /**
          * Re-enables logging for the given function. If `ALL` is passed into this
@@ -3424,7 +3424,7 @@ declare module "Bitburner" {
          * @ramCost 0 GB
          * @param {string} fn Name of function for which to enable logging.
          */
-        enableLog (fn: string): void;
+        enableLog(fn: string): void
 
         /**
          * Checks the status of the logging for the given function.
@@ -3433,7 +3433,7 @@ declare module "Bitburner" {
          * @param {string} fn Name of function to check.
          * @returns {boolean} Returns a boolean indicating whether or not logging is enabled for that function (or `ALL`)
          */
-        isLogEnabled (fn: string): boolean;
+        isLogEnabled(fn: string): boolean
 
         /**
          * Returns a script’s logs. The logs are returned as an array, where each line is an element in the array.
@@ -3465,7 +3465,7 @@ declare module "Bitburner" {
          * @param {...string} [args] Arguments to identify which scripts to get logs for.
          * @returns {string[]} Returns an string array, where each line is an element in the array. The most recently logged line is at the end of the array.
          */
-        getScriptLogs (fn?: Script, ip?: Host, ...args: any[]): string[];
+        getScriptLogs(fn?: Script, ip?: Host, ...args: any[]): string[]
 
         /**
          * Opens a script’s logs. This is functionally the same as the tail Terminal command.
@@ -3494,7 +3494,7 @@ declare module "Bitburner" {
          * @param {string} host IP or hostname of the server to scan.
          * @param {boolean} hostnames Optional boolean specifying whether the function should output hostnames (if true) or IP addresses (if false).
          */
-        tail (fn?: Script, ip?: Host, ...args: any[]): void;
+        tail(fn?: Script, ip?: Host, ...args: any[]): void
 
         /**
          * Returns an array containing the hostnames or IPs of all servers that are one
@@ -3506,7 +3506,7 @@ declare module "Bitburner" {
          * @param {boolean} hostnames Optional boolean specifying whether the function should output hostnames (if true) or IP addresses (if false).
          * @returns {string[]} Returns an string of hostnames or IP.
          */
-        scan (host: Host, hostnames?: boolean): Host[];
+        scan(host: Host, hostnames?: boolean): Host[]
 
         /**
          * Runs the NUKE.exe program on the target server. NUKE.exe must exist on your home computer.
@@ -3518,7 +3518,7 @@ declare module "Bitburner" {
          * @ramCost 0.05 GB
          * @param {string} host IP or hostname of the target server.
          */
-        nuke (host: Host): void;
+        nuke(host: Host): void
 
         /**
          * Runs the BruteSSH.exe program on the target server. BruteSSH.exe must exist on your home computer.
@@ -3530,7 +3530,7 @@ declare module "Bitburner" {
          * @ramCost 0.05 GB
          * @param {string} host IP or hostname of the target server.
          */
-        brutessh (host: Host): void;
+        brutessh(host: Host): void
 
         /**
          * Runs the FTPCrack.exe program on the target server. FTPCrack.exe must exist on your home computer.
@@ -3542,7 +3542,7 @@ declare module "Bitburner" {
          * @ramCost 0.05 GB
          * @param {string} host IP or hostname of the target server.
          */
-        ftpcrack (host: Host): void;
+        ftpcrack(host: Host): void
 
         /**
          * Runs the relaySMTP.exe program on the target server. relaySMTP.exe must exist on your home computer.
@@ -3554,7 +3554,7 @@ declare module "Bitburner" {
          * @ramCost 0.05 GB
          * @param {string} host IP or hostname of the target server.
          */
-        relaysmtp (host: Host): void;
+        relaysmtp(host: Host): void
 
         /**
          * Runs the HTTPWorm.exe program on the target server. HTTPWorm.exe must exist on your home computer.
@@ -3566,7 +3566,7 @@ declare module "Bitburner" {
          * @ramCost 0.05 GB
          * @param {string} host IP or hostname of the target server.
          */
-        httpworm (host: Host): void;
+        httpworm(host: Host): void
 
         /**
          * Runs the SQLInject.exe program on the target server. SQLInject.exe must exist on your home computer.
@@ -3578,7 +3578,7 @@ declare module "Bitburner" {
          * @ramCost 0.05 GB
          * @param {string} host IP or hostname of the target server.
          */
-        sqlinject (host: Host): void;
+        sqlinject(host: Host): void
 
         /**
          * Run a script as a separate process. This function can only be used to run scripts located on the
@@ -3615,11 +3615,11 @@ declare module "Bitburner" {
          * @param {...string} [args] Additional arguments to pass into the new script that is being run. Note that if any arguments are being passed into the new script, then the second argument numThreads must be filled in with a value.
          * @returns {number} Returns the PID of a successfully started script, and 0 otherwise.
          */
-        run (
+        run(
             script: Script,
             numThreads?: number,
             ...args: string[]
-        ): number;
+        ): number
 
         /**
          * Run a script as a separate process on a specified server. This is similar to the run function
@@ -3656,12 +3656,12 @@ declare module "Bitburner" {
          * @param {...string} [args] Additional arguments to pass into the new script that is being run. Note that if any arguments are being passed into the new script, then the third argument numThreads must be filled in with a value.
          * @returns {number} Returns the PID of a successfully started script, and 0 otherwise.
          */
-        exec (
+        exec(
             script: Script,
             host: Host,
             numThreads?: number,
             ...args: string[]
-        ): number;
+        ): number
 
         /**
          * Terminates the current script, and then after a delay of about 10 seconds it will execute the
@@ -3681,7 +3681,7 @@ declare module "Bitburner" {
          * @param {string} numThreads Number of threads to spawn new script with. Will be rounded to nearest integer.
          * @param {...string} [args] Additional arguments to pass into the new script that is being run.
          */
-        spawn (script: Script, numThreads?: number, ...args: string[]): void;
+        spawn(script: Script, numThreads?: number, ...args: string[]): void
 
         /**
          * Kills the script on the target server specified by the script’s name and arguments.
@@ -3710,7 +3710,7 @@ declare module "Bitburner" {
          * @param {...string} [args] Arguments to identify which script to kill.
          * @returns {boolean} True if the script is successfully killed, and false otherwise.
          */
-        kill (script: Script, host: Host, ...args: string[]): boolean;
+        kill(script: Script, host: Host, ...args: string[]): boolean
 
         /**
          * Kills the script with the specified PID.
@@ -3729,7 +3729,7 @@ declare module "Bitburner" {
          * @param {number} scriptPid PID of the script to kill
          * @returns {boolean} True if the script is successfully killed, and false otherwise.
          */
-        kill (scriptPid: number): boolean;
+        kill(scriptPid: number): boolean
 
         /**
          * Kills all running scripts on the specified server. This function returns true
@@ -3740,14 +3740,14 @@ declare module "Bitburner" {
          * @param host {string} IP or hostname of the server on which to kill all scripts.
          * @returns {boolean} True if any scripts were killed, and false otherwise.
          */
-        killall (host: Host): boolean;
+        killall(host: Host): boolean
 
         /**
          * Terminates the current script immediately.
          *
          * @ramCost 0 GB
          */
-        exit (): void;
+        exit(): void
 
         /**
          * Copies a script or literature (.lit) file(s) to another server. The files argument can be either a string
@@ -3763,7 +3763,7 @@ declare module "Bitburner" {
          * @param {(string|number)} destination Host or IP of the destination server, which is the server to which the file will be copied.
          * @returns {boolean} True if the script/literature file is successfully copied over and false otherwise. If the files argument is an array then this function will return true if at least one of the files in the array is successfully copied.
          */
-        scp (files: string | ReadonlyArray<string>, destination: Host): boolean;
+        scp(files: string | ReadonlyArray<string>, destination: Host): boolean
 
         /**
          * Copies a script or literature (.lit) file(s) to another server. The files argument can be either a string
@@ -3786,12 +3786,12 @@ declare module "Bitburner" {
          * @param {(string|number)} destination Host or IP of the destination server, which is the server to which the file will be copied.
          * @returns {boolean} True if the script/literature file is successfully copied over and false otherwise. If the files argument is an array then this function will return true if at least one of the files in the array is successfully copied.
          */
-        scp (
+        scp(
             files: string | ReadonlyArray<string>,
             source: | Host,
             // tslint:disable-next-line:unified-signatures
             destination: Host
-        ): boolean;
+        ): boolean
 
         /**
          * Returns an array with the filenames of all files on the specified server
@@ -3802,7 +3802,7 @@ declare module "Bitburner" {
          * @param {string} grep A substring to search for in the filename.
          * @returns {string[]} Array with the filenames of all files on the specified server.
          */
-        ls (host: Host, grep?: string): string[];
+        ls(host: Host, grep?: string): string[]
 
         /**
          * Returns an array with general information about all scripts running on the specified target server.
@@ -3822,7 +3822,7 @@ declare module "Bitburner" {
          * @param {string} host Host or IP address of the target server. If not specified, it will be the current server’s IP by default.
          * @returns {object} Array with general information about all scripts running on the specified target server.
          */
-        ps (host?: Host): ProcessInfo[];
+        ps(host?: Host): ProcessInfo[]
 
         /**
          * Returns a boolean indicating whether or not the player has root access to the specified target server.
@@ -3837,7 +3837,7 @@ declare module "Bitburner" {
          * @param {string} host Host or IP of the target server
          * @returns {boolean} True if player has root access to the specified target server, and false otherwise.
          */
-        hasRootAccess (host: Host): boolean;
+        hasRootAccess(host: Host): boolean
 
         /**
          * Returns a string with the hostname of the server that the script is running on.
@@ -3845,7 +3845,7 @@ declare module "Bitburner" {
          * @ramCost 0.05 GB
          * @returns {string} Hostname of the server that the script is on.
          */
-        getHostname (): Host;
+        getHostname(): Host
 
         /**
          * Returns the player’s current hacking level.
@@ -3853,7 +3853,7 @@ declare module "Bitburner" {
          * @ramCost 0.05 GB
          * @returns {number} Player’s current hacking level
          */
-        getHackingLevel (): number;
+        getHackingLevel(): number
 
         /**
          * Returns an object containing the Player’s hacking related multipliers.
@@ -3870,7 +3870,7 @@ declare module "Bitburner" {
          * @ramCost 4 GB
          * @returns {object} Object containing the Player’s hacking related multipliers.
          */
-        getHackingMultipliers (): HackingMultipliers;
+        getHackingMultipliers(): HackingMultipliers
 
         /**
          * Returns an object containing the Player’s hacknet related multipliers.
@@ -3887,7 +3887,7 @@ declare module "Bitburner" {
          * @ramCost 4 GB
          * @returns {object} Object containing the Player’s hacknet related multipliers.
          */
-        getHacknetMultipliers (): HacknetMultipliers;
+        getHacknetMultipliers(): HacknetMultipliers
 
         /**
          * Returns the amount of money available on a server.
@@ -3902,7 +3902,7 @@ declare module "Bitburner" {
          * @param {string} host Host or IP of target server
          * @returns {number} Amount of money available on the server.
          */
-        getServerMoneyAvailable (host: Host): number;
+        getServerMoneyAvailable(host: Host): number
 
         /**
          * Returns the maximum amount of money that can be available on a server.
@@ -3911,7 +3911,7 @@ declare module "Bitburner" {
          * @param {string} host Host or IP of target server.
          * @returns {number} Maximum amount of money available on the server.
          */
-        getServerMaxMoney (host: Host): number;
+        getServerMaxMoney(host: Host): number
 
         /**
          * Returns the server’s instrinsic “growth parameter”. This growth
@@ -3925,7 +3925,7 @@ declare module "Bitburner" {
          * @param {string} host Host or IP of target server.
          * @returns {number} Parameter that affects the percentage by which the server’s money is increased when using the {@link grow} function.
          */
-        getServerGrowth (host: Host): number;
+        getServerGrowth(host: Host): number
 
         /**
          * Returns the security level of the target server. A server’s security
@@ -3936,7 +3936,7 @@ declare module "Bitburner" {
          * @param {string} host Host or IP of target server.
          * @returns {number} Security level of the target server.
          */
-        getServerSecurityLevel (host: Host): number;
+        getServerSecurityLevel(host: Host): number
 
         /**
          * Returns the base security level of the target server. This is the security
@@ -3951,7 +3951,7 @@ declare module "Bitburner" {
          * @param {string} host Host or IP of target server.
          * @returns {number} Base security level of the target server.
          */
-        getServerBaseSecurityLevel (host: Host): number;
+        getServerBaseSecurityLevel(host: Host): number
 
         /**
          * Returns the minimum security level of the target server.
@@ -3960,7 +3960,7 @@ declare module "Bitburner" {
          * @param {string} host Host or IP of target server.
          * @returns {number} Minimum security level of the target server.
          */
-        getServerMinSecurityLevel (host: Host): number;
+        getServerMinSecurityLevel(host: Host): number
 
         /**
          * Returns the required hacking level of the target server.
@@ -3969,7 +3969,7 @@ declare module "Bitburner" {
          * @param {string} host Host or IP of target server.
          * @returns {number} The required hacking level of the target server.
          */
-        getServerRequiredHackingLevel (host: Host): number;
+        getServerRequiredHackingLevel(host: Host): number
 
         /**
          * Returns the number of open ports required to successfully run NUKE.exe on the specified server.
@@ -3978,25 +3978,11 @@ declare module "Bitburner" {
          * @param {string} host Host or IP of target server.
          * @returns {number} The number of open ports required to successfully run NUKE.exe on the specified server.
          */
-        getServerNumPortsRequired (host: Host): number;
+        getServerNumPortsRequired(host: Host): number
 
-        /**
-         * Returns an array with two elements that gives information about a server’s memory (RAM).
-         * The first element in the array is the amount of RAM that the server has total (in GB).
-         * The second element in the array is the amount of RAM that is currently being used on
-         * the server (in GB).
-         *
-         * @example
-         * ```js
-         * res = getServerRam("helios");
-         * totalRam = res[0];
-         * ramUsed = res[1];
-         * ```
-         * @ramCost 0.1 GB
-         * @param {string} host Host or IP of target server.
-         * @returns {[number,number]} Array with total and used memory on the specified server.
-         */
-        getServerRam (host: Host): [number, number];
+        getServerMaxRam(host: Host): number
+
+        getServerUsedRam(host: Host): number
 
         /**
          * Returns a boolean denoting whether or not the specified server exists.
@@ -4005,7 +3991,7 @@ declare module "Bitburner" {
          * @param {string} host Host or IP of target server.
          * @returns {boolean} True if specified server exists, and false otherwise.
          */
-        serverExists (host: Host): boolean;
+        serverExists(host: Host): boolean
 
         /**
          * Returns a boolean indicating whether the specified file exists on the target server.
@@ -4031,7 +4017,7 @@ declare module "Bitburner" {
          * @param {(string|number)} [host] Host or IP of target server. This is optional. If it is not specified then the function will use the current server as the target server.
          * @returns {boolean} True if specified file exists, and false otherwise.
          */
-        fileExists (filename: string, host?: Host): boolean;
+        fileExists(filename: string, host?: Host): boolean
 
         /**
          * Returns a boolean indicating whether the specified script is running on the target server.
@@ -4058,7 +4044,7 @@ declare module "Bitburner" {
          * @param {...string} [args] Arguments to specify/identify which scripts to search for.
          * @returns {boolean} True if specified script is running on the target server, and false otherwise.
          */
-        isRunning (script: Script, host: Host, ...args: string[]): boolean;
+        isRunning(script: Script, host: Host, ...args: string[]): boolean
 
         /**
          * Returns the cost to purchase a server with the specified amount of ram.
@@ -4073,7 +4059,7 @@ declare module "Bitburner" {
          * @param {number} ram Amount of RAM of a potential purchased server. Must be a power of 2 (2, 4, 8, 16, etc.). Maximum value of 1048576 (2^20).
          * @returns {number} The cost to purchase a server with the specified amount of ram.
          */
-        getPurchasedServerCost (ram: number): number;
+        getPurchasedServerCost(ram: number): number
 
         /**
          * Purchased a server with the specified hostname and amount of RAM.
@@ -4108,7 +4094,7 @@ declare module "Bitburner" {
          * @param {number} ram Amount of RAM of the purchased server. Must be a power of 2 (2, 4, 8, 16, etc.). Maximum value of 1048576 (2^20).
          * @returns {string} The hostname of the newly purchased server.
          */
-        purchaseServer (hostname: Host, ram: number): Host | "";
+        purchaseServer(hostname: Host, ram: number): Host | ""
 
         /**
          * Deletes one of your purchased servers, which is specified by its hostname.
@@ -4121,7 +4107,7 @@ declare module "Bitburner" {
          * @param {string} host Host of the server to delete.
          * @returns {boolean} True if successful, and false otherwise.
          */
-        deleteServer (host: Host): boolean;
+        deleteServer(host: Host): boolean
 
         /**
          * Returns an array with either the hostnames or IPs of all of the servers you have purchased.
@@ -4130,7 +4116,7 @@ declare module "Bitburner" {
          * @param {boolean} hostname Specifies whether hostnames or IP addresses should be returned. If it’s true then hostnames will be returned, and if false then IPs will be returned. If this argument is omitted then it is true by default.
          * @returns {string[]} Returns an array with either the hostnames or IPs of all of the servers you have purchased.
          */
-        getPurchasedServers (hostname?: boolean): Host[];
+        getPurchasedServers(hostname?: boolean): Host[]
 
         /**
          * Returns the maximum number of servers you can purchase.
@@ -4138,7 +4124,7 @@ declare module "Bitburner" {
          * @ramCost 0.05 GB
          * @returns {number} Returns the maximum number of servers you can purchase.
          */
-        getPurchasedServerLimit (): number;
+        getPurchasedServerLimit(): number
 
         /**
          * Returns the maximum RAM that a purchased server can have.
@@ -4146,7 +4132,7 @@ declare module "Bitburner" {
          * @ramCost 0.05 GB
          * @returns {number} Returns the maximum RAM that a purchased server can have.
          */
-        getPurchasedServerMaxRam (): number;
+        getPurchasedServerMaxRam(): number
 
         /**
          * This function can be used to either write data to a port or to a text file (.txt).
@@ -4168,7 +4154,7 @@ declare module "Bitburner" {
          * @param {string} data Data to write.
          * @param {string} mode Defines the write mode. Only valid when writing to text files.
          */
-        write (handle: Handle, data?: string | string[] | number, mode?: "w" | "a"): void;
+        write(handle: Handle, data?: string | string[] | number, mode?: "w" | "a"): void
 
         /**
          * Attempts to write data to the specified Netscript Port.
@@ -4180,7 +4166,7 @@ declare module "Bitburner" {
          * @param {string} data Data to write.
          * @returns {boolean} True if the data is successfully written to the port, and false otherwise.
          */
-        tryWrite (port: Handle, data: string | string[] | number): boolean;
+        tryWrite(port: Handle, data: string | string[] | number): boolean
 
         /**
          * This function is used to read data from a port or from a text file (.txt).
@@ -4198,7 +4184,7 @@ declare module "Bitburner" {
          * @param {(string|number)} handle Port or text file to read from.
          * @returns {(string|number|object)} Data in the specified text file or port.
          */
-        read (handle: Handle): string | number | object;
+        read(handle: Handle): string | number | object
 
         /**
          * This function is used to peek at the data from a port. It returns the
@@ -4209,7 +4195,7 @@ declare module "Bitburner" {
          * @param {number} port Port to peek. Must be an integer between 1 and 20.
          * @returns {(string|number|object)} Data in the specified port.
          */
-        peek (port: Port): string | number | object;
+        peek(port: Port): string | number | object
 
         /**
          * This function is used to clear data in a Netscript Ports or a text file.
@@ -4223,7 +4209,7 @@ declare module "Bitburner" {
          * @ramCost 1 GB
          * @param {(string|number)} handle Port or text file to clear.
          */
-        clear (handle: Handle): void;
+        clear(handle: Handle): void
 
         /**
          * Get a handle to a Netscript Port.
@@ -4235,7 +4221,7 @@ declare module "Bitburner" {
          * @param {number} port Port number. Must be an integer between 1 and 20.
          * @returns {Array} Data in the specified port.
          */
-        getPortHandle (port: Port): any[];
+        getPortHandle(port: Port): any[]
 
         /**
          * Removes the specified file from the current server. This function works for every file
@@ -4246,7 +4232,7 @@ declare module "Bitburner" {
          * @param {string} [host] Host or IP Address of the server on which to delete the file. Optional. Defaults to current server.
          * @returns {boolean} True if it successfully deletes the file, and false otherwise.
          */
-        rm (name: string, host?: Host): boolean;
+        rm(name: string, host?: Host): boolean
 
         /**
          * Returns a boolean indicating whether any instance of the specified script is running
@@ -4270,7 +4256,7 @@ declare module "Bitburner" {
          * @param {string} host Host or IP of target server.
          * @returns {boolean} True if the specified script is running, and false otherwise.
          */
-        scriptRunning (script: Script, host: Host): boolean;
+        scriptRunning(script: Script, host: Host): boolean
 
         /**
          * Kills all scripts with the specified filename on the target server specified by hostname/ip,
@@ -4281,7 +4267,7 @@ declare module "Bitburner" {
          * @param {string} host Host or IP of target server.
          * @returns {boolean} true if one or more scripts were successfully killed, and false if none were.
          */
-        scriptKill (script: Script, host: Host): boolean;
+        scriptKill(script: Script, host: Host): boolean
 
         /**
          * Returns the current script name.
@@ -4289,7 +4275,7 @@ declare module "Bitburner" {
          * @ramCost 0 GB
          * @returns {string} Current script name.
          */
-        getScriptName (): string;
+        getScriptName(): string
 
         /**
          * Returns the amount of RAM required to run the specified script on the target server.
@@ -4300,7 +4286,7 @@ declare module "Bitburner" {
          * @param {string} [host] Host or IP of target server the script is located on. This is optional, If it is not specified then the function will se the current server as the target server.
          * @returns {string} Amount of RAM required to run the specified script on the target server, and 0 if the script does not exist.
          */
-        getScriptRam (script: Script, host?: Host): number;
+        getScriptRam(script: Script, host?: Host): number
 
         /**
          * Returns the amount of time in seconds it takes to execute the {@link hack} Netscript function on the target server.
@@ -4312,7 +4298,7 @@ declare module "Bitburner" {
          * @param {number} [intLvl] Optional intelligence level for the calculation. Defaults to player’s current intelligence level. (Intelligence is unlocked after obtaining Source-File 5).
          * @returns {number} Returns the amount of time in seconds it takes to execute the {@link hack} Netscript function. Returns Infinity if called on a Hacknet Server.
          */
-        getHackTime (host: Host, hackLvl?: number, intLvl?: number): number;
+        getHackTime(host: Host, hackLvl?: number, intLvl?: number): number
 
         /**
          * Returns the amount of time in seconds it takes to execute the {@link grow} Netscript function on the target server.
@@ -4324,7 +4310,7 @@ declare module "Bitburner" {
          * @param {number} [intLvl] Optional intelligence level for the calculation. Defaults to player’s current intelligence level. (Intelligence is unlocked after obtaining Source-File 5).
          * @returns {number} Returns the amount of time in seconds it takes to execute the {@link grow} Netscript function. Returns Infinity if called on a Hacknet Server.
          */
-        getGrowTime (host: Host, hackLvl?: number, intLvl?: number): number;
+        getGrowTime(host: Host, hackLvl?: number, intLvl?: number): number
 
         /**
          * Returns the amount of time in seconds it takes to execute the weaken() Netscript function on the target server.
@@ -4336,7 +4322,7 @@ declare module "Bitburner" {
          * @param {number} [intLvl] Optional intelligence level for the calculation. Defaults to player’s current intelligence level. (Intelligence is unlocked after obtaining Source-File 5).
          * @returns {number} Returns the amount of time in seconds it takes to execute the {@link grow} Netscript function. Returns Infinity if called on a Hacknet Server.
          */
-        getWeakenTime (host: Host, hackLvl?: number, intLvl?: number): number;
+        getWeakenTime(host: Host, hackLvl?: number, intLvl?: number): number
 
         /**
          * Returns the amount of income the specified script generates while online
@@ -4359,7 +4345,7 @@ declare module "Bitburner" {
          * @param {string} [args] Arguments that the script is running with.
          * @returns {(number|[number,number])} Amount of income the specified script generates while online.
          */
-        getScriptIncome (script: Script, host: Host, ...args: string[]): number | [number, number];
+        getScriptIncome(script: Script, host: Host, ...args: string[]): number | [number, number]
 
         /**
          * Returns the amount of hacking experience the specified script generates while online
@@ -4375,7 +4361,7 @@ declare module "Bitburner" {
          * @param {...string[]} [args] Arguments that the script is running with.
          * @returns {number} Amount of hacking experience the specified script generates while online.
          */
-        getScriptExpGain (script: Script, host: Host, ...args: string[]): number;
+        getScriptExpGain(script: Script, host: Host, ...args: string[]): number
 
         /**
          * Returns the amount of time in milliseconds that have passed since you last installed Augmentations.
@@ -4383,7 +4369,7 @@ declare module "Bitburner" {
          * @ramCost 0.05 GB
          * @returns {number} Time in milliseconds that have passed since you last installed Augmentations.
          */
-        getTimeSinceLastAug (): number;
+        getTimeSinceLastAug(): number
 
         /**
          * Complete open source JavaScript sprintf implementation
@@ -4394,7 +4380,7 @@ declare module "Bitburner" {
          * @param {...string} args Formating arguments.
          * @returns {string} Formated text.
          */
-        sprintf (format: string, ...args: string[]): string;
+        sprintf(format: string, ...args: string[]): string
 
         /**
          * Complete open source JavaScript sprintf implementation
@@ -4405,7 +4391,7 @@ declare module "Bitburner" {
          * @param {string[]} args Formating arguments.
          * @returns {string} Formated text.
          */
-        vsprintf (format: string, args: string[]): string;
+        vsprintf(format: string, args: string[]): string
 
         /**
          * Converts a number into a string with the specified formatter.
@@ -4418,7 +4404,7 @@ declare module "Bitburner" {
          * @param {string} format Formatter.
          * @returns {string} Formated number.
          */
-        nFormat (n: number, format: string): number;
+        nFormat(n: number, format: string): number
 
         /**
          * Prompts the player with a dialog box with two options: “Yes” and “No”.
@@ -4430,7 +4416,7 @@ declare module "Bitburner" {
          * @param {string} txt Text to appear in the prompt dialog box.
          * @returns {Promise<boolean>} True if the player click “Yes” and false if the player clicks “No”.
          */
-        prompt (txt: string): Promise<boolean>;
+        prompt(txt: string): Promise<boolean>
 
         /**
          * Retrieves data from a URL and downloads it to a file on the specified server.
@@ -4460,7 +4446,7 @@ declare module "Bitburner" {
          * @param {string} [host] Optional hostname/ip of server for target file.
          * @returns {Promise<boolean>} True if the data was successfully retrieved from the URL, false otherwise.
          */
-        wget (url: string, target: string, host?: string): Promise<boolean>;
+        wget(url: string, target: string, host?: string): Promise<boolean>
 
         /**
          * Returns the amount of Faction favor required to be able to donate to a faction.
@@ -4468,7 +4454,7 @@ declare module "Bitburner" {
          * @ramCost 0.1 GB
          * @returns {number} Amount of Faction favor required to be able to donate to a faction.
          */
-        getFavorToDonate (): number;
+        getFavorToDonate(): number
 
         /**
          * Returns an object containing the current BitNode multipliers.
@@ -4490,6 +4476,6 @@ declare module "Bitburner" {
          * @ramCost 4 GB
          * @returns {object} Object containing the current BitNode multipliers.
          */
-        getBitNodeMultipliers (url: string, target: string, host: string): BitNodeMultipliers;
+        getBitNodeMultipliers(url: string, target: string, host: string): BitNodeMultipliers
     }
 }
