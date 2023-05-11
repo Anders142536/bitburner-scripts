@@ -16,7 +16,7 @@ export async function main(ns_: NS) {
 	scriptRam = ns.getScriptRam('moneymaker.js')
 
 	let prevHLevel = 0
-	while (true) {
+	while (companies.length > 0) {
 		let hLevel = ns.getHackingLevel()
 		if (prevHLevel == hLevel) {
 			ns.print('hacking level didn\'t change, waiting...')
@@ -53,6 +53,9 @@ export async function main(ns_: NS) {
 		ns.print(`${companies.length} companies left in list`)
 		prevHLevel = hLevel
 	}
+
+	ns.tprint('\nall companies are infected, done')
+	ns.print('\nall companies are infected, done')
 }
 
 // returns array of companies in system
