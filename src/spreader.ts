@@ -40,7 +40,7 @@ export async function main(ns_: NS) {
 				crackPorts(company)
 				ns.nuke(company)
 			}
-			let hackSuccessful = await hack(company)
+			let hackSuccessful = hack(company)
 			if (hackSuccessful) {
 				hacked.push(company)
 			}
@@ -120,7 +120,7 @@ function crackPorts(company: string) {
 		ns.sqlinject(company)
 }
 
-async function hack(company: string): Promise<boolean> {
+function hack(company: string): boolean {
 	// the hack method should only trigger once per company, so this *should* not
 	// kill the started scripts
 	ns.killall(company)
