@@ -59,13 +59,25 @@ export async function main(ns_: NS) {
 }
 
 // returns array of companies in system
-// TODO: make this a recursive scan
 function findAllCompanies() {
 	ns.print("finding all companies...")
-	let c = ns.scan("home")
+	let c = findChildCompanies('home')
 
 	ns.print(`found: ${c.length}`)
 	return c
+}
+
+function findChildCompanies(host: string): string[] {
+	let children = ns.scan(host)
+	// ns.print(`children of ${host}: ${JSON.stringify(children)}`)
+	let grandchildren: string[] = []
+
+	for (let i = 1; i < children.length; i++) {
+		grandchildren = grandchildren.concat(findChildCompanies(children[i]))
+		// ns.print(`got grandchildren of ${children[i]} (i=${i}): ${JSON.stringify(grandchildren)}`)
+	}
+
+	return Array.from(new Set(children.concat(grandchildren)))
 }
 
 function isHackable(company: string, hLevel: number) {
@@ -119,7 +131,13 @@ async function hack(company: string): Promise<boolean> {
 	let maxRam = ns.getServerMaxRam(company)
 	let usedRam = ns.getServerUsedRam(company)
 	let availRam = maxRam - usedRam
+
+	// as many as possible, but at least one
 	let threadCount = Math.floor(availRam / scriptRam)
+	if (threadCount == 0) {
+		ns.print(`> couldn't jiggle moneymaker on ${company} due to lack of RAM: ${availRam} RAM`)
+		return true
+	}
 
 	let pid = ns.exec('moneymaker.js', company, threadCount, company)
 
