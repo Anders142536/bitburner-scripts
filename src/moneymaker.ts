@@ -13,7 +13,7 @@ export async function main(ns: NS) {
 		let secLevel = ns.getServerSecurityLevel(company)
 		while (secLevel > minSecLevel) {
 			// TODO change this to sprintf
-			ns.print(`sec level ${minSecLevel}/${secLevel}, weakening...`)
+			ns.print(`sec level ${secLevel}/${minSecLevel}, weakening...`)
 			await ns.weaken(company)
 			secLevel = ns.getServerSecurityLevel(company)
 		}
@@ -25,8 +25,7 @@ export async function main(ns: NS) {
 			await ns.grow(company)
 		} else {
 			let gain = await ns.hack(company)
-			ns.print(`hacked company for ${gain}`)
-
+			ns.print(`hacked ${company} for ${gain}$`)
 		}
 	}
 }
