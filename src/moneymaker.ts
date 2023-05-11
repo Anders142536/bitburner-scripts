@@ -7,13 +7,14 @@ export async function main(ns: NS) {
 	let minSecLevel = ns.getServerMinSecurityLevel(company) + 1
 	let mMax = ns.getServerMaxMoney(company) * 0.75
 
-	// TODO optimize ram costs
+	ns.print(`minSecLevel: ${minSecLevel}`)
+	ns.print(`mMax:        ${mMax}`)
 
+	let secLevel = minSecLevel + 1
 	while (true) {
-		let secLevel = ns.getServerSecurityLevel(company)
 		while (secLevel > minSecLevel) {
 			// TODO change this to sprintf
-			ns.print(`sec level ${secLevel}/${minSecLevel}, weakening...`)
+			ns.print(`sec level ${secLevel} / ${minSecLevel}, weakening...`)
 			await ns.weaken(company)
 			secLevel = ns.getServerSecurityLevel(company)
 		}
@@ -21,7 +22,7 @@ export async function main(ns: NS) {
 		let mAvail = ns.getServerMoneyAvailable(company)
 		if (mAvail < mMax) {
 			// TODO change this to sprintf
-			ns.print(`money ${mAvail}/${mMax}, growing...`)
+			ns.print(`money ${mAvail} / ${mMax}, growing...`)
 			await ns.grow(company)
 		} else {
 			let gain = await ns.hack(company)
