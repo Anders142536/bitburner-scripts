@@ -1,0 +1,1 @@
+* replace bitburner.t.ts with https://github.com/danielyxie/bitburner/blob/dev/src/ScriptEditor/NetscriptDefinitions.d.ts
