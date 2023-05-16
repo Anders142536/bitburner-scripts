@@ -2,6 +2,8 @@ import type { BitBurner as NS } from 'Bitburner'
 
 let ns: NS
 let scriptRam: number
+
+// make this a Map of <String, boolean>
 let scripts: Scripts = {}
 let availableScriptsCount: number
 
@@ -31,7 +33,6 @@ export async function main(ns_: NS) {
 
 		for (let company of companies) {
 			if (!isHackable(company, hLevel)) {
-				ns.print(`${company} not hackable!`)
 				continue
 			}
 			if (!ns.hasRootAccess(company)) {
@@ -40,10 +41,8 @@ export async function main(ns_: NS) {
 				crackPorts(company)
 				ns.nuke(company)
 			}
-			let hackSuccessful = hack(company)
-			if (hackSuccessful) {
-				hacked.push(company)
-			}
+			hack(company)
+			hacked.push(company)
 		}
 
 		for (let company of hacked) {
@@ -120,12 +119,11 @@ function crackPorts(company: string) {
 		ns.sqlinject(company)
 }
 
-function hack(company: string): boolean {
+function hack(company: string) {
 	// the hack method should only trigger once per company, so this *should* not
 	// kill the started scripts
 	ns.killall(company)
 
-	ns.print(`hacking: ${company}`)
 	ns.scp('moneymaker.js', company)
 
 	let maxRam = ns.getServerMaxRam(company)
@@ -136,7 +134,7 @@ function hack(company: string): boolean {
 	let threadCount = Math.floor(availRam / scriptRam)
 	if (threadCount == 0) {
 		ns.print(`> couldn't jiggle moneymaker on ${company} due to lack of RAM: ${availRam} RAM`)
-		return true
+		return
 	}
 
 	let pid = ns.exec('moneymaker.js', company, threadCount, company)
@@ -144,11 +142,10 @@ function hack(company: string): boolean {
 	if (pid > 0) {
 		ns.tprint(`> successfully jiggled moneymaker on ${company} with ${threadCount} threads`)
 		ns.print(`> successfully jiggled moneymaker on ${company} with ${threadCount} threads`)
-		return true
+		return
 	}
 	ns.tprint(`> failed to jiggle moneymaker on ${company} with ${threadCount} threads`)
 	ns.print(`> failed to jiggle moneymaker on ${company} with ${threadCount} threads`)
-	return false
 
 }
 
